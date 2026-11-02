@@ -37,7 +37,7 @@
             <path d="M40 72h176l-16 112H56L40 72z"/>
             <path d="M88 104V72a40 40 0 0 1 80 0v32"/>
           </svg>
-          <span class="topnav__cart-count" data-cart-count style="display:none">0</span>
+          <span class="topnav__cart-count" data-cart-count hidden>0</span>
         </button>
         <button class="topnav__menu-btn" data-menu-btn aria-label="Open menu" aria-expanded="false">
           <svg width="20" height="20" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -62,58 +62,58 @@
 
   <main id="main">
 
-    <!-- HERO -->
+    <!-- HERO — asymmetric split: copy left, the product's own drawing right -->
     <section class="hero">
       <div class="container">
-        <span class="hero__eyebrow">B2B office equipment · Worldwide</span>
-        <h1 class="display-xl hero__title">Office equipment, end to end.</h1>
-        <p class="hero__sub">Officraft is the B2B vendor for companies that have outgrown office-supply catalogs. We sell the full office — pens, chairs, monitors, servers, conference-room AV, networking, and EU-hosted AI/ML software — from one cart, with per-product CO2e on every page.</p>
+        <div class="hero__grid">
 
-        <form class="hero__search" data-search-wrap role="search" onsubmit="return false">
-          <label for="hero-search" class="visually-hidden" style="position:absolute;left:-9999px">Search the catalog</label>
-          <div class="input--search-wrap" style="position:relative">
-            <svg class="search-icon" width="20" height="20" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <circle cx="116" cy="116" r="80"/>
-              <line x1="170" y1="170" x2="224" y2="224"/>
-            </svg>
-            <input
-              type="search"
-              id="hero-search"
-              class="input input--search"
-              data-search-input
-              placeholder="Search a SKU (e.g. OF-CHR-001) or ‘LLM inference EU-hosted’"
-              autocomplete="off"
-              aria-autocomplete="list"
-              aria-controls="hero-search-results"
-            />
-            <div class="search-results" id="hero-search-results" data-search-results role="listbox" aria-label="Catalog results"></div>
+          <div class="hero__text">
+            <span class="hero__eyebrow">B2B office equipment · Worldwide</span>
+            <h1 class="display-xl hero__title">Office equipment, end to end.</h1>
+            <p class="hero__sub">Officraft is the B2B vendor for companies that have outgrown office-supply catalogs. We sell the full office — pens, chairs, monitors, servers, conference-room AV, networking, and EU-hosted AI/ML software — from one cart, with per-product CO2e on every page.</p>
+
+            <form class="hero__search" data-search-wrap role="search" onsubmit="return false">
+              <label for="hero-search" class="visually-hidden">Search the catalog</label>
+              <div class="input--search-wrap">
+                <svg class="search-icon" width="20" height="20" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="116" cy="116" r="80"/>
+                  <line x1="170" y1="170" x2="224" y2="224"/>
+                </svg>
+                <input
+                  type="search"
+                  id="hero-search"
+                  class="input input--search"
+                  data-search-input
+                  placeholder="Search a SKU (e.g. OF-CHR-001) or ‘LLM inference EU-hosted’"
+                  autocomplete="off"
+                  aria-autocomplete="list"
+                  aria-controls="hero-search-results"
+                />
+                <div class="search-results" id="hero-search-results" data-search-results role="listbox" aria-label="Catalog results"></div>
+              </div>
+            </form>
+
+            <div class="hero__ctas">
+              <a href="catalog.html" class="btn btn--primary btn--lg">Open the catalog</a>
+              <a href="enterprise.html" class="btn btn--secondary btn--lg">Enterprise &amp; procurement</a>
+            </div>
+            <p class="hero__hint">39 SKUs across 7 categories. ISO 14001 manufactured. Net-30 from 5,000 EUR. Sphera-verified carbon data. SOC 2 Type II + EU AI Act compliant software.</p>
           </div>
-        </form>
 
-        <div class="hero__ctas">
-          <a href="catalog.html" class="btn btn--primary btn--lg">Open the catalog</a>
-          <a href="enterprise.html" class="btn btn--secondary btn--lg">Enterprise &amp; procurement</a>
+          <!-- The one decisive visual: a real spec drawing from the catalog -->
+          <a href="product.html" class="hero__drawing">
+            <div class="hero__drawing-frame">
+              <img src="_assets/illustrations/pdp-chair.svg" alt="OF-CHR-001 task chair, technical drawing with dimensions" />
+            </div>
+            <div class="hero__drawing-meta">
+              <span class="hero__drawing-sku">OF-CHR-001</span>
+              <span class="hero__drawing-name">Task Chair, Mesh Back, 4D armrests</span>
+              <span class="hero__drawing-spec">BIFMA X5.1 · EN 1335-1 Type A · 18.4 kgCO<sub>2</sub>e · 389,00 EUR from 1 unit</span>
+              <span class="hero__drawing-link">Spec sheet →</span>
+            </div>
+          </a>
+
         </div>
-        <p class="hero__hint">39 SKUs across 7 categories. ISO 14001 manufactured. Net-30 from 5,000 EUR. Sphera-verified carbon data. SOC 2 Type II + EU AI Act compliant software.</p>
-      </div>
-
-      <!-- Featured product (the one decisive imagery move on home) -->
-      <div class="container">
-        <a href="product.html" class="hero__featured" style="display:block; color: inherit; text-decoration: none;">
-          <div class="hero__featured-row">
-            <div class="hero__featured-svg">
-              <img src="_assets/illustrations/pdp-chair.svg" alt="OF-CHR-001 Task Chair technical drawing" style="width: 100%; max-width: 320px; height: auto; display: block;" />
-            </div>
-            <div class="hero__featured-meta">
-              <span class="hero__featured-sku">OF-CHR-001 · Featured</span>
-              <span class="hero__featured-name">Task Chair, Mesh Back, 4D armrests</span>
-              <span class="hero__featured-spec">BIFMA X5.1 · EN 1335-1 Type A · 12-year warranty · 18.4 kgCO2e · 64% recycled content · Greenguard Gold · €389.00 from 1 unit</span>
-            </div>
-            <div>
-              <span class="btn btn--tertiary">Spec sheet →</span>
-            </div>
-          </div>
-        </a>
       </div>
     </section>
 
@@ -189,24 +189,24 @@
           <p class="prose">Not because they aren't smart. Because their org chart and their catalog don't allow it.</p>
         </div>
 
-        <div style="display:grid; grid-template-columns: 1fr; gap: var(--space-8); margin-top: var(--space-8); border-top: 1px solid var(--paper-line);">
-          <div style="padding: var(--space-6) 0; border-bottom: 1px solid var(--paper-line);">
-            <span class="micro-label micro-label--accent" style="display:block; margin-bottom: var(--space-3);">Wedge 01 / 03</span>
-            <h3 class="h1" style="margin-bottom: var(--space-3);">One cart, every category.</h3>
+        <div class="wedge-list">
+          <div class="wedge-item">
+            <span class="micro-label micro-label--accent wedge-item__label">Wedge 01 / 03</span>
+            <h3 class="h1 wedge-item__title">One cart, every category.</h3>
             <p class="prose">Pen, chair, server, conference bar, network switch, LLM API commitment — all browsable from one cart, with one freight quote, one PO, and one account manager. No more reconciling 2–3 procurement workflows to kit out a new office.</p>
-            <p class="mono-data muted" style="margin-top: var(--space-4);">39 SKUs · 7 categories</p>
+            <p class="mono-data muted wedge-item__meta">39 SKUs · 7 categories</p>
           </div>
-          <div style="padding: var(--space-6) 0; border-bottom: 1px solid var(--paper-line);">
-            <span class="micro-label micro-label--accent" style="display:block; margin-bottom: var(--space-3);">Wedge 02 / 03</span>
-            <h3 class="h1" style="margin-bottom: var(--space-3);">Per-SKU carbon, on every page.</h3>
+          <div class="wedge-item">
+            <span class="micro-label micro-label--accent wedge-item__label">Wedge 02 / 03</span>
+            <h3 class="h1 wedge-item__title">Per-SKU carbon, on every page.</h3>
             <p class="prose">CO2e per unit (cradle-to-gate, Sphera-verified LCA), recycled content %, end-of-life status. Not on a brochure. On the product detail page. Copyable into your Scope 3 report.</p>
-            <p class="mono-data muted" style="margin-top: var(--space-4);">39 of 39 SKUs · 100%</p>
+            <p class="mono-data muted wedge-item__meta">39 of 39 SKUs · 100%</p>
           </div>
-          <div style="padding: var(--space-6) 0;">
-            <span class="micro-label micro-label--accent" style="display:block; margin-bottom: var(--space-3);">Wedge 03 / 03</span>
-            <h3 class="h1" style="margin-bottom: var(--space-3);">Specs before marketing copy.</h3>
+          <div class="wedge-item wedge-item--last">
+            <span class="micro-label micro-label--accent wedge-item__label">Wedge 03 / 03</span>
+            <h3 class="h1 wedge-item__title">Specs before marketing copy.</h3>
             <p class="prose">Every product page leads with the spec table — dimensions, certifications, warranty, CO2e — and the bulk-pricing table. The "why this product" paragraph comes after. We don't make you read a brochure to find a number.</p>
-            <p class="mono-data muted" style="margin-top: var(--space-4);">Spec-first PDPs · all 39</p>
+            <p class="mono-data muted wedge-item__meta">Spec-first PDPs · all 39</p>
           </div>
         </div>
       </div>
@@ -218,7 +218,7 @@
         <div class="moment">
           <div>
             <h2 class="moment__heading">A pen, a chair, a server, and a 1B-token LLM commitment. One quote. One freight quote. One PO.</h2>
-            <p class="muted">This is the order that takes 2am to place anywhere else. It takes 4 minutes here.</p>
+            <p class="muted">This is the order that takes 2am to place anywhere else. Here it takes 4 minutes</p>
             <ul class="moment__items">
               <li>3 × OF-WRT-001 roller pen, 0.5mm — 25.20 EUR</li>
               <li>200 × OF-CHR-001 task chair, mesh back — 53,800 EUR</li>
@@ -228,8 +228,8 @@
               <li>100 × OF-NET-101 Cat6A patch cable, 2m — 480 EUR</li>
               <li>1 × OF-AI-001 LLM inference, Tier S — 1B tokens, annual commit — 1,950 EUR</li>
             </ul>
-            <p class="mono-data muted" style="margin-top: 24px;">Subtotal: 71,995.20 EUR &nbsp;·&nbsp; Freight: 1 line item, calculated at checkout &nbsp;·&nbsp; Terms: Net-60 &nbsp;·&nbsp; AI Act + SOC 2 Type II disclosures included</p>
-            <div style="margin-top: 24px;">
+            <p class="mono-data muted moment__total">Subtotal: 71,995.20 EUR &nbsp;·&nbsp; Freight: 1 line item, calculated at checkout &nbsp;·&nbsp; Terms: Net-60 &nbsp;·&nbsp; AI Act + SOC 2 Type II disclosures included</p>
+            <div class="moment__cta">
               <a href="catalog.html" class="btn btn--primary">Build a quote</a>
             </div>
           </div>
@@ -294,7 +294,7 @@
          Each row is the .stat component (label | value | note), inline. -->
     <section class="tight">
       <div class="container">
-        <div style="border-top: 1px solid var(--paper-line); padding-top: var(--space-5);">
+        <div class="stat-block">
           <div class="stat">
             <span class="stat__label">SKUs</span>
             <span class="stat__value">39</span>
@@ -323,7 +323,7 @@
     <section class="tight">
       <div class="container">
         <div class="trust-strip">
-          <span class="micro-label" style="color: var(--paper-muted);">Certified &mdash;</span>
+          <span class="micro-label trust-strip__lead">Certified &mdash;</span>
           <span><svg viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="20" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="128" cy="128" r="96"/><path d="M88 128l32 32 56-56"/></svg>ISO 14001</span>
           <span><svg viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="20" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="128" cy="128" r="96"/><path d="M88 128l32 32 56-56"/></svg>ISO 9001</span>
           <span><svg viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="20" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="128" cy="128" r="96"/><path d="M88 128l32 32 56-56"/></svg>FSC Mix</span>
@@ -341,23 +341,23 @@
     <!-- EDITORIAL NUMBER — big-number block as a prose pullquote, not a flex of three stats -->
     <section class="airy">
       <div class="container container--narrow">
-        <span class="micro-label" style="display:block; margin-bottom: var(--space-4);">§ 03 — By the numbers</span>
-        <p class="display-lg" style="margin-bottom: var(--space-6);">12,400 tonnes of CO<sub>2</sub>e went into customer Scope 3 reports in 2026, sourced directly from the Officraft product pages.</p>
+        <span class="micro-label section-label">§ 03 — By the numbers</span>
+        <p class="display-lg pullquote">12,400 tonnes of CO<sub>2</sub>e went into customer Scope 3 reports in 2026, sourced directly from the Officraft product pages.</p>
         <p class="prose">Not estimates. Not extrapolations. Numbers our customers copy into their own disclosures, with the methodology linked on every PDP. The data is the brand.</p>
-        <p style="margin-top: var(--space-6);"><a href="sustainability.html" class="btn btn--tertiary">How we measure &rarr;</a></p>
+        <p class="pullquote__cta"><a href="sustainability.html" class="btn btn--tertiary">How we measure &rarr;</a></p>
       </div>
     </section>
 
     <!-- CTA -->
     <section>
       <div class="container">
-        <div style="border-top: 1px solid var(--paper-line); padding-top: var(--space-8); display: grid; grid-template-columns: 1fr; gap: var(--space-6); align-items: end;">
+        <div class="start-grid">
           <div>
-            <span class="micro-label" style="display:block; margin-bottom: var(--space-3);">§ 04 — Start</span>
+            <span class="micro-label section-label">§ 04 — Start</span>
             <h2 class="display-lg">Two ways to start.</h2>
-            <p class="prose" style="margin-top: var(--space-4);">Open a business account for net-30 terms and an account manager. Or talk to enterprise sales for a custom quote, punchout integration, and dedicated logistics.</p>
+            <p class="prose start-grid__prose">Open a business account for net-30 terms and an account manager. Or talk to enterprise sales for a custom quote, punchout integration, and dedicated logistics.</p>
           </div>
-          <div style="display: flex; flex-wrap: wrap; gap: var(--space-3);">
+          <div class="start-grid__actions">
             <a href="enterprise.html#account" class="btn btn--primary btn--lg">Open a business account</a>
             <a href="enterprise.html#contact" class="btn btn--secondary btn--lg">Talk to enterprise sales</a>
           </div>
@@ -376,7 +376,7 @@
             <span>Officraft</span>
           </a>
           <p class="footer__desc">Equipment for offices that take themselves seriously. Berlin, since 2023.</p>
-          <address style="font-style: normal; font-family: var(--font-mono); font-size: 0.75rem; color: var(--ink-muted); line-height: 1.6;">
+          <address class="footer__address">
             Officraft GmbH<br/>
             Skalitzer Strasse 104<br/>
             10997 Berlin, Germany
@@ -452,15 +452,15 @@
     </div>
     <div class="cart-drawer__body" data-cart-body></div>
     <div class="cart-drawer__foot" data-cart-foot>
-      <div style="display: flex; justify-content: space-between; margin-bottom: 16px;">
+      <div class="cart-foot__row">
         <span class="muted small">Subtotal</span>
         <span class="mono-data" data-cart-subtotal>0,00 EUR</span>
       </div>
-      <p class="small muted" style="margin-bottom: 16px;">Freight calculated at checkout. One line item regardless of categories in the cart. Net-30 from 5,000 EUR.</p>
-      <a href="enterprise.html#quote" class="btn btn--primary" style="width: 100%; justify-content: center;">Request a quote</a>
+      <p class="small muted cart-foot__note">Freight calculated at checkout. One line item regardless of categories in the cart. Net-30 from 5,000 EUR.</p>
+      <a href="enterprise.html#quote" class="btn btn--primary cart-foot__cta">Request a quote</a>
     </div>
   </div>
-  <div data-cart-backdrop style="display:none; position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 99;" aria-hidden="true"></div>
+  <div data-cart-backdrop class="cart-backdrop" hidden aria-hidden="true"></div>
 
   <script src="app.js"></script>
 </body>
