@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Mechanic 05 illustration">
+  <style>
+    .ink { stroke: #211F1B; }
+    .muted { stroke: #6F6A60; }
+    .accent { stroke: #F26B1F; }
+    .thin { stroke-width: 0.75; }
+    .hair { stroke-width: 0.5; }
+    .ink-text { font-family: "Geist Mono", "IBM Plex Mono", monospace; fill: #211F1B; stroke: none; }
+    .muted-text { font-family: "Geist Mono", "IBM Plex Mono", monospace; fill: #6F6A60; stroke: none; }
+    .accent-text { font-family: "Geist Mono", "IBM Plex Mono", monospace; fill: #F26B1F; stroke: none; font-weight: 600; }
+  </style>
+
+    <rect class="ink thin" x="2" y="2" width="316" height="196" />
+    <text class="muted-text" x="10" y="18" font-size="8">FIG. 05 · ACCOUNT MANAGER</text>
+    <text class="muted-text" x="306" y="18" font-size="8" text-anchor="end">1 named human</text>
+    <!-- Typographic avatar (no photo) -->
+    <rect class="ink thin" x="100" y="50" width="80" height="80" />
+    <text class="ink-text" x="140" y="92" font-size="24" font-weight="200" text-anchor="middle">LV</text>
+    <text class="muted-text" x="140" y="108" font-size="7" text-anchor="middle">LENA VOSS</text>
+    <text class="muted-text" x="140" y="118" font-size="7" text-anchor="middle">BERLIN · EU/AM</text>
+    <!-- Phone icon -->
+    <line class="ink thin" x1="190" y1="60" x2="220" y2="60" />
+    <line class="ink thin" x1="190" y1="68" x2="220" y2="68" />
+    <line class="ink thin" x1="190" y1="76" x2="220" y2="76" />
+    <text class="muted-text" x="205" y="68" font-size="7" text-anchor="middle">+49</text>
+    <text class="ink-text" x="10" y="178" font-size="9">avg reply &lt; 4 hrs</text>
+    <text class="muted-text" x="10" y="190" font-size="7">business hours · phone</text>
+  
+</svg>

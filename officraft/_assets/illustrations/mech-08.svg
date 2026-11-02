@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Mechanic 08 illustration">
+  <style>
+    .ink { stroke: #211F1B; }
+    .muted { stroke: #6F6A60; }
+    .accent { stroke: #F26B1F; }
+    .thin { stroke-width: 0.75; }
+    .hair { stroke-width: 0.5; }
+    .ink-text { font-family: "Geist Mono", "IBM Plex Mono", monospace; fill: #211F1B; stroke: none; }
+    .muted-text { font-family: "Geist Mono", "IBM Plex Mono", monospace; fill: #6F6A60; stroke: none; }
+    .accent-text { font-family: "Geist Mono", "IBM Plex Mono", monospace; fill: #F26B1F; stroke: none; font-weight: 600; }
+  </style>
+
+    <rect class="ink thin" x="2" y="2" width="316" height="196" />
+    <text class="muted-text" x="10" y="18" font-size="8">FIG. 08 · BRANDING</text>
+    <text class="muted-text" x="306" y="18" font-size="8" text-anchor="end">≥ 5,000 units</text>
+    <!-- Pen with custom logo, screen with custom screensaver -->
+    <!-- Pen -->
+    <line class="ink" x1="40" y1="70" x2="160" y2="70" />
+    <line class="ink" x1="40" y1="80" x2="160" y2="80" />
+    <polygon class="ink" points="160,68 175,75 160,82" />
+    <text class="accent-text" x="80" y="78" font-size="8" text-anchor="middle">CUSTOM LOGO</text>
+    <!-- Display -->
+    <rect class="ink" x="200" y="60" width="100" height="60" />
+    <line class="ink" x1="200" y1="100" x2="200" y2="110" />
+    <line class="ink" x1="300" y1="100" x2="300" y2="110" />
+    <line class="ink" x1="190" y1="115" x2="310" y2="115" />
+    <text class="accent-text" x="250" y="90" font-size="8" text-anchor="middle">YOUR NAME</text>
+    <text class="muted-text" x="250" y="102" font-size="6" text-anchor="middle">room display</text>
+    <!-- Arrow connecting them -->
+    <line class="accent thin" x1="178" y1="74" x2="195" y2="74" />
+    <text class="ink-text" x="10" y="178" font-size="9">no setup fee</text>
+    <text class="muted-text" x="10" y="190" font-size="7">pens · cables · displays</text>
+  
+</svg>

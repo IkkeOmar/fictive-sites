@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0E1116" />
+  <title>Sustainability — Officraft</title>
+  <meta name="description" content="Per-SKU CO2e on every product page, verified by Sphera LCA practitioners. Cradle-to-gate for physical goods, per-call for software. Methodology on the page, not behind a link." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@200;300;400;500;600;700&family=Geist+Mono:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23211F1B'/%3E%3Cpolygon points='8,8 24,8 16,24' fill='%23F8F6F2'/%3E%3C/svg%3E" />
+</head>
+<body>
+  <a class="skip-to-content" href="#main">Skip to content</a>
+
+  <header class="topnav">
+      <div class="container topnav__inner">
+        <a href="index.html" class="topnav__logo" aria-label="Officraft home">
+          <span class="topnav__logo-mark" aria-hidden="true"></span>
+          <span>Officraft</span>
+          <span class="topnav__logo-meta">Berlin · Est. 2023</span>
+        </a>
+        <nav aria-label="Primary">
+          <ul class="topnav__links">
+            <li><a href="catalog.html">Catalog</a></li>
+            <li><a href="sustainability.html" aria-current="page">Sustainability</a></li>
+            <li><a href="enterprise.html">Enterprise</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </nav>
+        <div class="topnav__actions">
+          <a href="catalog.html" class="btn btn--secondary btn--sm topnav__cta">Open catalog</a>
+          <button class="topnav__cart" data-open-cart aria-label="Open quote list (0 items)">
+            <svg width="20" height="20" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M40 72h176l-16 112H56L40 72z"/>
+              <path d="M88 104V72a40 40 0 0 1 80 0v32"/>
+            </svg>
+            <span class="topnav__cart-count" data-cart-count style="display:none">0</span>
+          </button>
+          <button class="topnav__menu-btn" data-menu-btn aria-label="Open menu" aria-expanded="false">
+            <svg width="20" height="20" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="40" y1="64" x2="216" y2="64"/>
+              <line x1="40" y1="128" x2="216" y2="128"/>
+              <line x1="40" y1="192" x2="216" y2="192"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+  <nav class="mobile-menu" data-mobile-menu aria-hidden="true" aria-label="Mobile">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="catalog.html">Catalog</a></li>
+      <li><a href="sustainability.html">Sustainability</a></li>
+      <li><a href="enterprise.html">Enterprise</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+
+  <main id="main">
+
+    <section class="hero">
+      <div class="container">
+        <span class="hero__eyebrow">Sustainability · Per-SKU data</span>
+        <h1 class="display-1 hero__title" style="max-width: 20ch;">The data is the brand.</h1>
+        <p class="hero__sub">Every Officraft SKU — pens, chairs, servers, LLM inference calls — has a per-unit CO2e number on its product page, with the methodology, the boundary, the practitioner, and the verification cadence linked from the same place. Not on a brochure. Not in a separate PDF. On the page where you decide whether to buy.</p>
+      </div>
+    </section>
+
+    <!-- Live data table -->
+    <section class="tight" id="data">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-head__eyebrow">Live data</span>
+          <h2 class="h1 section-head__title">Top 10 SKUs by CO2e intensity.</h2>
+          <p class="section-head__sub">Sortable by category, by CO2e, by recycled content. Download as CSV. Updated quarterly. Methodology on the page below.</p>
+        </div>
+
+        <div style="overflow-x: auto;">
+          <table class="lca-table" aria-label="Per-SKU CO2e data">
+            <thead>
+              <tr>
+                <th scope="col">SKU</th>
+                <th scope="col">Product</th>
+                <th scope="col">CO2e per unit</th>
+                <th scope="col">Recycled content</th>
+                <th scope="col">Category</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><span class="mono-data">OF-CMP-002</span></td><td>Workstation Tower, M5 Ultra</td><td>248,00 kg</td><td>88%</td><td>Workstation</td></tr>
+              <tr><td><span class="mono-data">OF-CMP-001</span></td><td>Workstation Tower, M3 Pro</td><td>142,00 kg</td><td>85%</td><td>Workstation</td></tr>
+              <tr><td><span class="mono-data">OF-SRV-002</span></td><td>Server, 2U Performance</td><td>132,60 kg</td><td>75%</td><td>Network &amp; Server</td></tr>
+              <tr><td><span class="mono-data">OF-SRV-001</span></td><td>Server, 1U Standard</td><td>64,80 kg</td><td>70%</td><td>Network &amp; Server</td></tr>
+              <tr><td><span class="mono-data">OF-NET-001</span></td><td>Switch, 48-Port PoE+</td><td>32,80 kg</td><td>—</td><td>Network &amp; Server</td></tr>
+              <tr><td><span class="mono-data">OF-CHR-002</span></td><td>Executive Chair, Leather</td><td>28,60 kg</td><td>—</td><td>Seating</td></tr>
+              <tr><td><span class="mono-data">OF-DSK-101</span></td><td>Sit-Stand Desk, Electric</td><td>26,40 kg</td><td>78%</td><td>Seating</td></tr>
+              <tr><td><span class="mono-data">OF-DSP-002</span></td><td>Monitor 32" 5K, Studio</td><td>26,40 kg</td><td>67%</td><td>Workstation</td></tr>
+              <tr><td><span class="mono-data">OF-DSP-001</span></td><td>Monitor 27" 4K, ProColor</td><td>18,60 kg</td><td>60%</td><td>Workstation</td></tr>
+              <tr><td><span class="mono-data">OF-CHR-001</span></td><td>Task Chair, Mesh Back</td><td>18,40 kg</td><td>64%</td><td>Seating</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="muted small" style="margin-top: 16px;">Showing 10 of 39 SKUs. Software products report CO2e per-API-call in the response header (<code class="mono-data" style="font-size: 0.8125rem;">X-Officraft-CO2e-grams</code>) and on their product detail pages. <a href="#" style="color: var(--paper); text-decoration: underline;">Download full CSV (39 rows, 4.2 kB)</a></p>
+      </div>
+    </section>
+
+    <!-- Methodology -->
+    <section id="methodology">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-head__eyebrow">Methodology</span>
+          <h2 class="h1 section-head__title">How we measure.</h2>
+          <p class="section-head__sub">A four-question rubric that every number on this page has been answered to. If your sustainability lead asks any of these, the answer is on the page.</p>
+        </div>
+
+        <div class="method-grid">
+          <div class="method-item">
+            <h3>1. What is the boundary?</h3>
+            <p><strong>Cradle-to-gate</strong> for physical goods. That includes raw material extraction, processing, manufacturing, and inbound logistics to our warehouse. It does not include outbound freight (we report that separately per shipment) or use-phase energy (where it varies wildly by customer infrastructure).</p>
+          </div>
+          <div class="method-item">
+            <h3>2. Who audits it?</h3>
+            <p><strong>Sphera</strong> (formerly thinkstep) is our LCA practitioner. They re-review the model annually and re-certify every SKU whose bill of materials changes by &gt;5%. The audit report is available under NDA to enterprise customers.</p>
+          </div>
+          <div class="method-item">
+            <h3>3. What standards?</h3>
+            <p><strong>ISO 14067</strong> for the carbon footprint of products. <strong>ISO 14064-1</strong> for our organizational Scope 1, 2, and 3 inventory. <strong>GHG Protocol</strong> for the underlying methodology. <strong>EPD International</strong> framework where the product is in a sector with an existing PCR (product category rules).</p>
+          </div>
+          <div class="method-item">
+            <h3>4. How current is it?</h3>
+            <p>The per-SKU table is refreshed <strong>quarterly</strong>. The data on any product page is timestamped. If you downloaded our numbers six months ago, they're already stale — the CSV link above always points at the current quarter.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Software sustainability -->
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <span class="section-head__eyebrow">Software</span>
+          <h2 class="h1 section-head__title">CO2e for inference, the same way we report it for chairs.</h2>
+          <p class="section-head__sub">Our AI/ML software SKUs return CO2e in grams per API call, in the response header, on every request. The same number appears on the product detail page, on the sustainability page, and in the monthly usage report.</p>
+        </div>
+
+        <div class="method-grid">
+          <div class="method-item">
+            <h3>Region</h3>
+            <p>Frankfurt (default) and Stockholm, both on 100% contracted renewable electricity via long-term power purchase agreements (PPAs) with verified European wind + solar operators.</p>
+          </div>
+          <div class="method-item">
+            <h3>Per-call measurement</h3>
+            <p>Response header <code class="mono-data" style="font-size: 0.8125rem;">X-Officraft-CO2e-grams</code>. Computed from GPU-seconds × datacenter PUE × grid emission factor (0, for our renewable-PPA regions). Audited by Sphera.</p>
+          </div>
+          <div class="method-item">
+            <h3>Data residency + retention</h3>
+            <p>Zero-retention inference by default. Customer prompts and completions are not stored, logged, or used for training. Customer-owned keys are encrypted at rest with HSM-managed KMS.</p>
+          </div>
+          <div class="method-item">
+            <h3>Compliance</h3>
+            <p>SOC 2 Type II + ISO 27001 certified. EU AI Act Article 53 GPAI obligations met. GDPR Art. 28 DPA included by default. The DPA covers EU and UK data residency commitments.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Take-back program -->
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <span class="section-head__eyebrow">Take-back program</span>
+          <h2 class="h1 section-head__title">We take it back at end of life. Free. We handle the logistics.</h2>
+          <p class="section-head__sub">Officraft chairs, desks, displays, servers, and conference bars are eligible for our end-of-life take-back program. We arrange collection, parts recovery, recycling, and you receive a diversion certificate for your Scope 3 reporting.</p>
+        </div>
+
+        <div class="stat-strip">
+          <div class="stat">
+            <div class="stat__num">142 t</div>
+            <div class="stat__label">Diverted from landfill through the Officraft take-back program, 2024–2026 (verifiable in our annual sustainability report)</div>
+          </div>
+          <div class="stat">
+            <div class="stat__num">96%</div>
+            <div class="stat__label">Average recyclability of Officraft chairs by mass, verified at take-back</div>
+          </div>
+          <div class="stat">
+            <div class="stat__num">14</div>
+            <div class="stat__label">EU countries where take-back is currently operational (full list on request)</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications -->
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <span class="section-head__eyebrow">Certifications</span>
+          <h2 class="h1 section-head__title">The certificate list, with links to the actual certificates.</h2>
+          <p class="section-head__sub">Not logo soup. Each entry links to the issuing body's record or a downloadable copy of the certificate PDF.</p>
+        </div>
+        <div class="grid-3">
+          <div class="card"><h3 class="card__title">ISO 14001</h3><p class="card__desc">Environmental management system, scope: Berlin HQ + manufacturing partners. <a href="#" class="btn btn--tertiary" style="padding: 0;">Certificate →</a></p></div>
+          <div class="card"><h3 class="card__title">ISO 9001</h3><p class="card__desc">Quality management system, scope: same as above. <a href="#" class="btn btn--tertiary" style="padding: 0;">Certificate →</a></p></div>
+          <div class="card"><h3 class="card__title">ISO 14064-1</h3><p class="card__desc">GHG inventory at organizational level, verified by Sphera annually. <a href="#" class="btn btn--tertiary" style="padding: 0;">Statement →</a></p></div>
+          <div class="card"><h3 class="card__title">ISO 27001</h3><p class="card__desc">Information security, covers the AI/ML software stack and customer data handling. <a href="#" class="btn btn--tertiary" style="padding: 0;">Certificate →</a></p></div>
+          <div class="card"><h3 class="card__title">SOC 2 Type II</h3><p class="card__desc">Trust services criteria, covering security + availability + confidentiality. Report under NDA. <a href="enterprise.html#contact" class="btn btn--tertiary" style="padding: 0;">Request report →</a></p></div>
+          <div class="card"><h3 class="card__title">EU AI Act</h3><p class="card__desc">Article 53 GPAI obligations met. Provider registerable under the EU database (Article 52). <a href="#" class="btn btn--tertiary" style="padding: 0;">Statement →</a></p></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="cta-strip">
+          <div>
+            <h2 class="h1">Use our CO2e data in your Scope 3 report.</h2>
+            <p class="muted" style="margin-top: 12px;">Every Officraft product page returns a CO2e number your sustainability team can paste into CSRD, CDP, or SBTi disclosures — with the methodology linked from the same row.</p>
+          </div>
+          <div class="cta-strip__actions">
+            <a href="catalog.html" class="btn btn--primary btn--lg">Browse the catalog</a>
+            <a href="enterprise.html#contact" class="btn btn--secondary btn--lg">Talk to enterprise sales</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__col">
+          <a href="index.html" class="topnav__logo" style="color: var(--paper)">
+            <span class="topnav__logo-mark" aria-hidden="true"></span>
+            <span>Officraft</span>
+          </a>
+          <p class="muted" style="margin-top: 16px; font-size: 0.9375rem; max-width: 28ch;">Equipment for offices that take themselves seriously.</p>
+          <address class="footer__address">
+            Officraft GmbH<br/>
+            Skalitzer Strasse 104<br/>
+            10997 Berlin, Germany
+          </address>
+        </div>
+        <div class="footer__col">
+          <h4>Catalog</h4>
+          <ul>
+            <li><a href="catalog.html#cat-1">Writing &amp; Desk Tools</a></li>
+            <li><a href="catalog.html#cat-2">Paper, Filing &amp; Print</a></li>
+            <li><a href="catalog.html#cat-3">Ergonomic Seating &amp; Desks</a></li>
+            <li><a href="catalog.html#cat-4">Workstation Hardware</a></li>
+            <li><a href="catalog.html#cat-5">Meeting &amp; Conference</a></li>
+            <li><a href="catalog.html#cat-6">Network &amp; Server</a></li>
+            <li><a href="catalog.html#cat-7">AI &amp; ML Software</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="sustainability.html">Sustainability</a></li>
+            <li><a href="enterprise.html">Enterprise</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="about.html#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Terms of sale</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Imprint</a></li>
+            <li><a href="#">Status</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2026 Officraft GmbH · ISO 14001 + ISO 9001 certified</span>
+        <span class="footer__built">Built in Berlin · Runs on renewable electricity</span>
+      </div>
+    </div>
+  </footer>
+
+  <div data-cart-drawer class="cart-drawer" aria-hidden="true" aria-label="Quote list" role="dialog">
+    <div class="cart-drawer__head">
+      <div class="cart-drawer__title">Quote list</div>
+      <button class="cart-drawer__close" data-close-cart aria-label="Close quote list">
+        <svg width="18" height="18" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="20" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="48" y1="48" x2="208" y2="208"/><line x1="208" y1="48" x2="48" y2="208"/></svg>
+      </button>
+    </div>
+    <div class="cart-drawer__body" data-cart-body></div>
+    <div class="cart-drawer__foot" data-cart-foot>
+      <div style="display: flex; justify-content: space-between; margin-bottom: 16px;">
+        <span class="muted small">Subtotal</span>
+        <span class="mono-data" data-cart-subtotal>0,00 EUR</span>
+      </div>
+      <p class="small muted" style="margin-bottom: 16px;">Freight calculated at checkout. One line item regardless of categories. Net-30 from 5,000 EUR.</p>
+      <a href="enterprise.html#quote" class="btn btn--primary" style="width: 100%; justify-content: center;">Request a quote</a>
+    </div>
+  </div>
+  <div data-cart-backdrop style="display:none; position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 99;" aria-hidden="true"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>

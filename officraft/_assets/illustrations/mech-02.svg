@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Mechanic 02 illustration">
+  <style>
+    .ink { stroke: #211F1B; }
+    .muted { stroke: #6F6A60; }
+    .accent { stroke: #F26B1F; }
+    .thin { stroke-width: 0.75; }
+    .hair { stroke-width: 0.5; }
+    .ink-text { font-family: "Geist Mono", "IBM Plex Mono", monospace; fill: #211F1B; stroke: none; }
+    .muted-text { font-family: "Geist Mono", "IBM Plex Mono", monospace; fill: #6F6A60; stroke: none; }
+    .accent-text { font-family: "Geist Mono", "IBM Plex Mono", monospace; fill: #F26B1F; stroke: none; font-weight: 600; }
+  </style>
+
+    <rect class="ink thin" x="2" y="2" width="316" height="196" />
+    <text class="muted-text" x="10" y="18" font-size="8">FIG. 02 · BULK TIERS</text>
+    <text class="muted-text" x="306" y="18" font-size="8" text-anchor="end">4 tiers</text>
+    <!-- 4 ladder bars -->
+    <rect class="ink hair" x="40" y="50" width="220" height="20" />
+    <rect class="ink hair" x="40" y="74" width="180" height="20" />
+    <rect class="ink hair" x="40" y="98" width="140" height="20" />
+    <rect class="accent"    x="40" y="122" width="100" height="20" stroke-width="1.5" />
+    <text class="muted-text" x="280" y="64"  font-size="8" text-anchor="end">1 — 9</text>
+    <text class="muted-text" x="240" y="88"  font-size="8" text-anchor="end">10 — 49</text>
+    <text class="muted-text" x="200" y="112" font-size="8" text-anchor="end">50 — 499</text>
+    <text class="accent-text" x="160" y="136" font-size="8" text-anchor="end" font-weight="600">1,000+</text>
+    <line class="accent thin" x1="285" y1="60" x2="285" y2="132" />
+    <polygon points="282,130 288,130 285,136" fill="#F26B1F" />
+    <text class="ink-text" x="10" y="178" font-size="9">visible without login</text>
+    <text class="muted-text" x="10" y="190" font-size="7">all 39 SKUs · same shape</text>
+  
+</svg>

@@ -1,0 +1,1507 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hydroverftet ApS — VVS & Strømningsteknik til dansk industri</title>
+<meta name="description" content="B2B VVS-entreprise og fluid mechanics-engineering. Vi løser strømningsproblemer i fjernvarme, procesvand, ventilation og renrum — med CFD-tankegang og 27 års erfaring.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   HYDROVERFTET — Design System
+   Industrial slate + safety orange
+   ============================================================ */
+:root{
+  --slate-900:#0F172A;
+  --slate-800:#1E293B;
+  --slate-700:#334155;
+  --slate-600:#475569;
+  --slate-500:#64748B;
+  --slate-400:#94A3B8;
+  --slate-200:#E2E8F0;
+  --slate-100:#F1F5F9;
+  --slate-50:#F8FAFC;
+  --orange:#EA580C;
+  --orange-light:#F97316;
+  --orange-glow:rgba(234,88,12,0.18);
+  --cyan:#0891B2;
+  --water:#0EA5E9;
+  --water-deep:#0369A1;
+  --steel:#64748B;
+  --bg:#FFFFFF;
+  --ink:#0F172A;
+  --muted:#64748B;
+  --border:#E2E8F0;
+  --radius:4px;
+  --radius-lg:8px;
+  --shadow-sm:0 1px 2px rgba(15,23,42,0.04),0 1px 3px rgba(15,23,42,0.06);
+  --shadow-md:0 4px 6px -1px rgba(15,23,42,0.08),0 2px 4px -2px rgba(15,23,42,0.06);
+  --shadow-lg:0 10px 25px -5px rgba(15,23,42,0.12),0 8px 10px -6px rgba(15,23,42,0.08);
+  --font-sans:'IBM Plex Sans',system-ui,-apple-system,sans-serif;
+  --font-mono:'JetBrains Mono',ui-monospace,monospace;
+  --ease:cubic-bezier(0.16,1,0.3,1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--font-sans);
+  color:var(--ink);
+  background:var(--bg);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+.mono{font-family:var(--font-mono);font-feature-settings:"tnum" 1,"zero" 1}
+.label{
+  font-family:var(--font-mono);
+  font-size:0.7rem;
+  font-weight:500;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  color:var(--orange);
+}
+.container{max-width:1280px;margin:0 auto;padding:0 2rem}
+
+/* ============================================================
+   NAV
+   ============================================================ */
+.nav{
+  position:sticky;top:0;z-index:100;
+  background:rgba(255,255,255,0.92);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border);
+}
+.nav-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:1rem 2rem;max-width:1280px;margin:0 auto;
+}
+.brand{display:flex;align-items:center;gap:0.75rem;font-weight:600;font-size:1.05rem}
+.brand-mark{
+  width:32px;height:32px;border-radius:var(--radius);
+  background:var(--slate-900);
+  display:grid;place-items:center;
+  position:relative;overflow:hidden;
+}
+.brand-mark::before{
+  content:"";position:absolute;inset:6px;
+  background:linear-gradient(135deg,var(--orange),var(--orange-light));
+  border-radius:2px;
+  clip-path:polygon(0 100%,20% 60%,40% 80%,60% 40%,80% 70%,100% 30%,100% 100%);
+}
+.brand-name strong{font-weight:700;color:var(--slate-900)}
+.brand-name span{color:var(--muted);font-weight:400;margin-left:0.5rem;font-size:0.85rem;font-family:var(--font-mono)}
+.nav-links{display:flex;gap:2rem;align-items:center}
+.nav-links a{
+  font-size:0.9rem;color:var(--slate-700);font-weight:500;
+  transition:color 0.2s;
+}
+.nav-links a:hover{color:var(--orange)}
+.nav-cta{
+  background:var(--slate-900);color:#fff;
+  padding:0.6rem 1.1rem;border-radius:var(--radius);
+  font-size:0.85rem;font-weight:500;
+  transition:all 0.2s var(--ease);
+}
+.nav-cta:hover{background:var(--orange);transform:translateY(-1px)}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero{
+  position:relative;overflow:hidden;
+  background:linear-gradient(180deg,var(--slate-50) 0%,#fff 100%);
+  padding:5rem 0 4rem;
+  border-bottom:1px solid var(--border);
+}
+.hero-grid{
+  display:grid;grid-template-columns:1.1fr 1fr;gap:4rem;
+  align-items:center;
+}
+.hero h1{
+  font-size:clamp(2.4rem,5vw,4.2rem);
+  line-height:1.05;letter-spacing:-0.03em;
+  font-weight:600;color:var(--slate-900);
+  margin:0.8rem 0 1.2rem;
+}
+.hero h1 .accent{
+  background:linear-gradient(135deg,var(--orange) 0%,var(--orange-light) 100%);
+  -webkit-background-clip:text;background-clip:text;
+  -webkit-text-fill-color:transparent;
+  position:relative;
+}
+.hero h1 .accent::after{
+  content:"";position:absolute;left:0;right:0;bottom:-4px;height:2px;
+  background:linear-gradient(90deg,var(--orange),transparent);
+}
+.hero p.lede{
+  font-size:1.15rem;color:var(--slate-600);max-width:540px;line-height:1.6;
+}
+.hero-actions{display:flex;gap:1rem;margin-top:2rem;flex-wrap:wrap}
+.btn{
+  display:inline-flex;align-items:center;gap:0.5rem;
+  padding:0.9rem 1.6rem;border-radius:var(--radius);
+  font-size:0.95rem;font-weight:500;
+  transition:all 0.2s var(--ease);
+}
+.btn-primary{
+  background:var(--orange);color:#fff;
+  box-shadow:0 4px 12px var(--orange-glow);
+}
+.btn-primary:hover{background:var(--orange-light);transform:translateY(-2px);box-shadow:0 8px 20px var(--orange-glow)}
+.btn-ghost{
+  background:transparent;color:var(--slate-900);
+  border:1px solid var(--slate-200);
+}
+.btn-ghost:hover{border-color:var(--slate-900);background:var(--slate-50)}
+
+.hero-stats{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;
+  margin-top:3rem;padding-top:2rem;
+  border-top:1px solid var(--border);
+}
+.hero-stat .num{
+  font-family:var(--font-mono);font-size:1.8rem;font-weight:600;
+  color:var(--slate-900);line-height:1;letter-spacing:-0.02em;
+}
+.hero-stat .num small{font-size:0.9rem;color:var(--orange);font-weight:500;margin-left:2px}
+.hero-stat .lbl{
+  font-family:var(--font-mono);font-size:0.7rem;color:var(--muted);
+  text-transform:uppercase;letter-spacing:0.1em;margin-top:0.4rem;
+}
+
+/* ============================================================
+   HERO ANIMATION — Fluid flow SVG
+   ============================================================ */
+.flow-stage{
+  position:relative;
+  aspect-ratio:1.1/1;
+  background:var(--slate-900);
+  border-radius:var(--radius-lg);
+  overflow:hidden;
+  box-shadow:var(--shadow-lg);
+}
+.flow-stage::before{
+  content:"";position:absolute;inset:0;
+  background:
+    linear-gradient(rgba(255,255,255,0.03) 1px,transparent 1px) 0 0/40px 40px,
+    linear-gradient(90deg,rgba(255,255,255,0.03) 1px,transparent 1px) 0 0/40px 40px;
+  opacity:0.5;
+}
+.flow-stage svg{width:100%;height:100%}
+.flow-tag{
+  position:absolute;top:1rem;left:1rem;
+  font-family:var(--font-mono);font-size:0.65rem;
+  color:var(--orange);letter-spacing:0.1em;
+  text-transform:uppercase;
+}
+.flow-readout{
+  position:absolute;bottom:1rem;left:1rem;right:1rem;
+  font-family:var(--font-mono);font-size:0.75rem;
+  color:rgba(255,255,255,0.85);line-height:1.7;
+  background:rgba(0,0,0,0.4);padding:0.6rem 0.8rem;
+  border-radius:var(--radius);border:1px solid rgba(255,255,255,0.1);
+  backdrop-filter:blur(4px);
+}
+.flow-readout .v{color:var(--orange-light)}
+.flow-readout .row{display:flex;justify-content:space-between;gap:1rem}
+
+/* ============================================================
+   SECTIONS — shared
+   ============================================================ */
+section{padding:6rem 0;position:relative}
+.section-head{margin-bottom:4rem;max-width:720px}
+.section-head .label{margin-bottom:1rem;display:inline-block}
+.section-head h2{
+  font-size:clamp(2rem,3.5vw,2.8rem);
+  font-weight:600;color:var(--slate-900);
+  letter-spacing:-0.02em;line-height:1.15;
+  margin-bottom:1rem;
+}
+.section-head p{
+  font-size:1.05rem;color:var(--slate-600);line-height:1.6;
+}
+
+/* ============================================================
+   CAPABILITIES
+   ============================================================ */
+.capabilities{background:var(--slate-50)}
+.cap-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.cap{
+  background:#fff;border:1px solid var(--border);
+  padding:2rem;border-radius:var(--radius-lg);
+  transition:all 0.3s var(--ease);
+  position:relative;overflow:hidden;
+}
+.cap::before{
+  content:"";position:absolute;top:0;left:0;right:0;height:2px;
+  background:var(--orange);transform:scaleX(0);transform-origin:left;
+  transition:transform 0.4s var(--ease);
+}
+.cap:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);border-color:transparent}
+.cap:hover::before{transform:scaleX(1)}
+.cap-icon{
+  width:48px;height:48px;border-radius:var(--radius);
+  background:var(--slate-100);
+  display:grid;place-items:center;margin-bottom:1.2rem;
+  color:var(--slate-700);
+}
+.cap-num{
+  font-family:var(--font-mono);font-size:0.7rem;
+  color:var(--muted);letter-spacing:0.1em;margin-bottom:0.6rem;
+}
+.cap h3{font-size:1.15rem;font-weight:600;color:var(--slate-900);margin-bottom:0.5rem}
+.cap p{font-size:0.92rem;color:var(--slate-600);line-height:1.55}
+.cap .tags{
+  display:flex;flex-wrap:wrap;gap:0.4rem;margin-top:1rem;
+}
+.cap .tag{
+  font-family:var(--font-mono);font-size:0.65rem;
+  background:var(--slate-100);color:var(--slate-700);
+  padding:0.25rem 0.5rem;border-radius:var(--radius);
+  letter-spacing:0.04em;
+}
+
+/* ============================================================
+   METHOD
+   ============================================================ */
+.method{background:var(--slate-900);color:#fff}
+.method .label{color:var(--orange-light)}
+.method .section-head h2{color:#fff}
+.method .section-head p{color:var(--slate-400)}
+.method-steps{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:0;
+  position:relative;
+}
+.method-step{
+  padding:2rem 1.5rem;border-left:1px solid rgba(255,255,255,0.08);
+  position:relative;
+}
+.method-step:first-child{border-left:none;padding-left:0}
+.method-step .n{
+  font-family:var(--font-mono);font-size:0.75rem;color:var(--orange-light);
+  letter-spacing:0.1em;margin-bottom:0.8rem;
+}
+.method-step h4{
+  font-size:1.1rem;font-weight:600;color:#fff;margin-bottom:0.6rem;
+}
+.method-step p{font-size:0.9rem;color:var(--slate-400);line-height:1.55}
+.method-step .spec{
+  margin-top:1rem;padding-top:1rem;
+  border-top:1px solid rgba(255,255,255,0.08);
+  font-family:var(--font-mono);font-size:0.7rem;
+  color:var(--slate-500);letter-spacing:0.04em;line-height:1.7;
+}
+
+/* ============================================================
+   CASE STUDY
+   ============================================================ */
+.case{background:#fff;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.case-card{
+  display:grid;grid-template-columns:1.2fr 1fr;gap:0;
+  border:1px solid var(--border);border-radius:var(--radius-lg);
+  overflow:hidden;background:#fff;
+}
+.case-text{padding:3rem}
+.case-text .meta{
+  font-family:var(--font-mono);font-size:0.7rem;
+  color:var(--muted);letter-spacing:0.1em;
+  margin-bottom:0.8rem;
+}
+.case-text h3{
+  font-size:1.7rem;font-weight:600;color:var(--slate-900);
+  margin-bottom:1rem;line-height:1.2;
+}
+.case-text p{color:var(--slate-600);margin-bottom:1.2rem;font-size:0.95rem}
+.case-metrics{
+  display:grid;grid-template-columns:1fr 1fr;gap:1px;
+  background:var(--border);
+}
+.case-metric{background:var(--slate-900);color:#fff;padding:1.5rem}
+.case-metric .k{
+  font-family:var(--font-mono);font-size:1.6rem;font-weight:600;
+  color:var(--orange-light);line-height:1;
+}
+.case-metric .u{
+  font-family:var(--font-mono);font-size:0.7rem;
+  color:var(--slate-400);margin-left:0.25rem;font-weight:400;
+}
+.case-metric .l{
+  font-family:var(--font-mono);font-size:0.65rem;
+  color:var(--slate-500);letter-spacing:0.1em;
+  text-transform:uppercase;margin-top:0.5rem;
+}
+.case-tags{display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:1.5rem}
+.case-tags .tag{
+  font-family:var(--font-mono);font-size:0.7rem;
+  background:var(--slate-100);color:var(--slate-700);
+  padding:0.35rem 0.7rem;border-radius:var(--radius);
+}
+
+/* ============================================================
+   CALCULATOR — Interactive SVG
+   ============================================================ */
+.calc{background:var(--slate-50)}
+.calc-stage{
+  background:#fff;border:1px solid var(--border);
+  border-radius:var(--radius-lg);padding:2rem;
+  display:grid;grid-template-columns:1fr 1.2fr;gap:2rem;
+}
+.calc-controls h3{
+  font-size:1.3rem;font-weight:600;color:var(--slate-900);margin-bottom:0.5rem;
+}
+.calc-controls p{font-size:0.9rem;color:var(--slate-600);margin-bottom:1.5rem}
+.calc-field{margin-bottom:1.2rem}
+.calc-field label{
+  display:flex;justify-content:space-between;
+  font-family:var(--font-mono);font-size:0.75rem;
+  color:var(--slate-700);margin-bottom:0.5rem;
+  letter-spacing:0.04em;
+}
+.calc-field label .v{
+  color:var(--orange);font-weight:600;
+}
+.calc-field input[type=range]{
+  width:100%;-webkit-appearance:none;background:transparent;
+}
+.calc-field input[type=range]::-webkit-slider-runnable-track{
+  height:4px;background:var(--slate-200);border-radius:2px;
+}
+.calc-field input[type=range]::-webkit-slider-thumb{
+  -webkit-appearance:none;width:18px;height:18px;
+  background:var(--orange);border-radius:50%;
+  margin-top:-7px;cursor:pointer;
+  box-shadow:0 0 0 4px rgba(234,88,12,0.15);
+  transition:box-shadow 0.2s;
+}
+.calc-field input[type=range]::-webkit-slider-thumb:hover{
+  box-shadow:0 0 0 6px rgba(234,88,12,0.25);
+}
+.calc-field input[type=range]::-moz-range-track{
+  height:4px;background:var(--slate-200);border-radius:2px;
+}
+.calc-field input[type=range]::-moz-range-thumb{
+  width:18px;height:18px;background:var(--orange);
+  border:none;border-radius:50%;cursor:pointer;
+  box-shadow:0 0 0 4px rgba(234,88,12,0.15);
+}
+.calc-readout{
+  background:var(--slate-900);color:#fff;
+  padding:1.5rem;border-radius:var(--radius);
+  font-family:var(--font-mono);
+}
+.calc-readout .title{
+  font-size:0.7rem;color:var(--orange-light);
+  letter-spacing:0.1em;text-transform:uppercase;margin-bottom:1rem;
+}
+.calc-readout .big{
+  font-size:2.5rem;font-weight:600;color:#fff;
+  line-height:1;letter-spacing:-0.02em;
+}
+.calc-readout .big .u{
+  font-size:1rem;color:var(--slate-400);margin-left:0.5rem;font-weight:400;
+}
+.calc-readout .sub{
+  font-size:0.8rem;color:var(--slate-400);margin-top:0.5rem;
+  line-height:1.5;
+}
+.calc-readout .grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:1px;
+  background:rgba(255,255,255,0.1);margin-top:1rem;
+  border:1px solid rgba(255,255,255,0.1);
+}
+.calc-readout .cell{
+  background:var(--slate-900);padding:0.8rem;
+}
+.calc-readout .cell .k{
+  font-size:0.95rem;color:#fff;font-weight:500;
+}
+.calc-readout .cell .u{
+  font-size:0.7rem;color:var(--slate-400);
+}
+.calc-readout .cell .l{
+  font-size:0.6rem;color:var(--slate-500);
+  text-transform:uppercase;letter-spacing:0.1em;margin-top:0.2rem;
+}
+.calc-pipe{
+  background:var(--slate-900);border-radius:var(--radius);
+  padding:2rem;display:grid;place-items:center;
+  position:relative;overflow:hidden;min-height:340px;
+}
+.calc-pipe::before{
+  content:"";position:absolute;inset:0;
+  background:
+    linear-gradient(rgba(255,255,255,0.02) 1px,transparent 1px) 0 0/30px 30px,
+    linear-gradient(90deg,rgba(255,255,255,0.02) 1px,transparent 1px) 0 0/30px 30px;
+}
+
+/* ============================================================
+   INDUSTRIES
+   ============================================================ */
+.industries{background:#fff}
+.ind-grid{
+  display:grid;grid-template-columns:repeat(6,1fr);gap:1rem;
+}
+.ind{
+  border:1px solid var(--border);border-radius:var(--radius-lg);
+  padding:1.5rem;text-align:center;
+  transition:all 0.25s var(--ease);
+  background:#fff;
+}
+.ind:hover{
+  border-color:var(--orange);background:var(--slate-50);
+  transform:translateY(-2px);
+}
+.ind-icon{
+  width:40px;height:40px;margin:0 auto 0.8rem;
+  display:grid;place-items:center;color:var(--slate-700);
+}
+.ind-name{font-size:0.85rem;font-weight:600;color:var(--slate-900);margin-bottom:0.3rem}
+.ind-desc{font-size:0.72rem;color:var(--muted);font-family:var(--font-mono)}
+
+/* ============================================================
+   CREDENTIALS
+   ============================================================ */
+.cred{background:var(--slate-50)}
+.cred-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
+.cred-list{
+  display:flex;flex-direction:column;gap:0;
+  border-top:1px solid var(--border);
+}
+.cred-item{
+  display:grid;grid-template-columns:80px 1fr auto;gap:1rem;
+  align-items:center;padding:1.2rem 0;
+  border-bottom:1px solid var(--border);
+}
+.cred-item .code{
+  font-family:var(--font-mono);font-size:0.85rem;color:var(--orange);font-weight:600;
+}
+.cred-item .name{font-size:0.95rem;color:var(--slate-900);font-weight:500}
+.cred-item .desc{font-size:0.8rem;color:var(--slate-500)}
+.cred-item .check{color:var(--orange)}
+
+.stack-card{
+  background:var(--slate-900);color:#fff;
+  padding:2rem;border-radius:var(--radius-lg);
+}
+.stack-card h3{font-size:1.1rem;font-weight:600;margin-bottom:1rem}
+.stack-card .stack-list{
+  display:grid;grid-template-columns:1fr 1fr;gap:0.8rem;
+}
+.stack-item{
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(255,255,255,0.08);
+  padding:0.8rem;border-radius:var(--radius);
+}
+.stack-item .nm{font-size:0.9rem;color:#fff;font-weight:500}
+.stack-item .rs{font-size:0.7rem;color:var(--slate-400);font-family:var(--font-mono)}
+
+/* ============================================================
+   CONTACT
+   ============================================================ */
+.contact{background:var(--slate-900);color:#fff;overflow:hidden;position:relative}
+.contact::before{
+  content:"";position:absolute;top:0;right:0;width:600px;height:600px;
+  background:radial-gradient(circle,var(--orange-glow) 0%,transparent 70%);
+  filter:blur(40px);
+}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;position:relative;z-index:1}
+.contact .label{color:var(--orange-light)}
+.contact h2{font-size:clamp(2rem,3.5vw,2.8rem);font-weight:600;color:#fff;letter-spacing:-0.02em;margin-bottom:1rem;line-height:1.15}
+.contact .lede{font-size:1.05rem;color:var(--slate-400);margin-bottom:2.5rem;line-height:1.6}
+.contact-info{
+  display:flex;flex-direction:column;gap:1.5rem;
+  margin-bottom:2.5rem;
+}
+.contact-row{
+  display:grid;grid-template-columns:30px 1fr;gap:1rem;align-items:start;
+}
+.contact-row .ic{color:var(--orange-light);margin-top:2px}
+.contact-row .lbl{
+  font-family:var(--font-mono);font-size:0.7rem;
+  color:var(--slate-500);letter-spacing:0.1em;
+  text-transform:uppercase;margin-bottom:0.2rem;
+}
+.contact-row .val{font-size:1rem;color:#fff}
+.contact-row .val.mono{font-family:var(--font-mono);font-size:0.95rem}
+
+.form{display:flex;flex-direction:column;gap:1rem}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.form-field{display:flex;flex-direction:column;gap:0.4rem}
+.form-field label{
+  font-family:var(--font-mono);font-size:0.7rem;
+  color:var(--slate-400);letter-spacing:0.1em;text-transform:uppercase;
+}
+.form-field input,.form-field select,.form-field textarea{
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(255,255,255,0.1);
+  color:#fff;font-family:var(--font-sans);font-size:0.95rem;
+  padding:0.8rem 1rem;border-radius:var(--radius);
+  transition:all 0.2s;
+}
+.form-field input:focus,.form-field select:focus,.form-field textarea:focus{
+  outline:none;border-color:var(--orange);
+  background:rgba(234,88,12,0.05);
+}
+.form-field textarea{resize:vertical;min-height:100px}
+.form-submit{
+  background:var(--orange);color:#fff;
+  padding:0.95rem 1.6rem;border-radius:var(--radius);
+  font-size:0.95rem;font-weight:500;
+  margin-top:0.5rem;
+  transition:all 0.2s var(--ease);
+  display:inline-flex;align-items:center;justify-content:center;gap:0.5rem;
+}
+.form-submit:hover{background:var(--orange-light);transform:translateY(-1px)}
+.urgent-banner{
+  background:rgba(234,88,12,0.1);
+  border:1px solid rgba(234,88,12,0.3);
+  padding:1rem;border-radius:var(--radius);
+  display:flex;align-items:center;gap:0.8rem;
+  margin-top:1.5rem;font-size:0.85rem;
+}
+.urgent-banner .dot{
+  width:8px;height:8px;border-radius:50%;background:var(--orange);
+  box-shadow:0 0 0 0 rgba(234,88,12,0.6);
+  animation:pulse 2s infinite;
+}
+@keyframes pulse{
+  0%{box-shadow:0 0 0 0 rgba(234,88,12,0.6)}
+  70%{box-shadow:0 0 0 10px rgba(234,88,12,0)}
+  100%{box-shadow:0 0 0 0 rgba(234,88,12,0)}
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+footer{
+  background:#0a0e1a;color:var(--slate-400);
+  padding:3rem 0 2rem;border-top:1px solid var(--slate-800);
+}
+.foot-grid{
+  display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;
+  margin-bottom:2.5rem;
+}
+.foot-brand p{font-size:0.85rem;color:var(--slate-500);margin-top:0.8rem;line-height:1.5}
+.foot-col h5{
+  font-family:var(--font-mono);font-size:0.7rem;color:var(--slate-500);
+  letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.8rem;
+}
+.foot-col a{
+  display:block;font-size:0.85rem;color:var(--slate-400);
+  padding:0.25rem 0;transition:color 0.2s;
+}
+.foot-col a:hover{color:var(--orange-light)}
+.foot-bottom{
+  padding-top:1.5rem;border-top:1px solid var(--slate-800);
+  display:flex;justify-content:space-between;align-items:center;
+  font-family:var(--font-mono);font-size:0.7rem;
+  color:var(--slate-500);letter-spacing:0.04em;
+}
+
+/* ============================================================
+   REVEAL
+   ============================================================ */
+.reveal{opacity:0;transform:translateY(20px);transition:opacity 0.7s ease,transform 0.7s var(--ease)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-d1{transition-delay:0.1s}
+.reveal-d2{transition-delay:0.2s}
+.reveal-d3{transition-delay:0.3s}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width:1024px){
+  .hero-grid,.case-card,.calc-stage,.contact-grid,.cred-grid{grid-template-columns:1fr}
+  .case-metrics{grid-template-columns:1fr 1fr}
+  .method-steps{grid-template-columns:repeat(2,1fr)}
+  .method-step:nth-child(3){border-left:none;padding-left:0}
+  .method-step:nth-child(2n+1){border-left:none;padding-left:0}
+  .ind-grid{grid-template-columns:repeat(3,1fr)}
+}
+@media (max-width:680px){
+  .container{padding:0 1.2rem}
+  .nav-links{display:none}
+  .cap-grid,.ind-grid,.method-steps{grid-template-columns:1fr}
+  .method-step{border-left:none;padding-left:0}
+  .form-row{grid-template-columns:1fr}
+  .hero-stats{grid-template-columns:1fr;gap:1rem}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     NAV
+     ============================================================ -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#" class="brand">
+      <div class="brand-mark"></div>
+      <div class="brand-name">
+        <strong>Hydroverftet</strong><span>ApS · CVR 39847201</span>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="#ydelser">Ydelser</a>
+      <a href="#metode">Metode</a>
+      <a href="#cases">Cases</a>
+      <a href="#industri">Industri</a>
+      <a href="#kontakt" class="nav-cta">Få et tilbud →</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-text">
+        <span class="label">// VVS & Strømningsteknik — siden 1998</span>
+        <h1>Vi bygger ikke bare rør. <span class="accent">Vi løser strømningsproblemer.</span></h1>
+        <p class="lede">Hydroverftet ApS er en dansk B2B-ingeniørvirksomhed specialiseret i VVS-entreprise, hydraulisk projektering og fluidmekanisk optimering. Vi arbejder for industri, fjernvarme, bygherrer og entreprenører — med CFD-tankegang og 27 års erfaring.</p>
+        <div class="hero-actions">
+          <a href="#kontakt" class="btn btn-primary">Start en opgave →</a>
+          <a href="#cases" class="btn btn-ghost">Se casestudie</a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat reveal">
+            <div class="num">27<small>år</small></div>
+            <div class="lbl">erfaring i felten</div>
+          </div>
+          <div class="hero-stat reveal reveal-d1">
+            <div class="num">412<small>+</small></div>
+            <div class="lbl">gennemførte projekter</div>
+          </div>
+          <div class="hero-stat reveal reveal-d2">
+            <div class="num">DN<small>250</small></div>
+            <div class="lbl">op til DN250 rør</div>
+          </div>
+        </div>
+      </div>
+      <div class="flow-stage reveal">
+        <span class="flow-tag">// LIVE · CFD VISUALISERING</span>
+        <svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMid meet">
+          <defs>
+            <linearGradient id="pipe" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#1E293B"/>
+              <stop offset="100%" stop-color="#334155"/>
+            </linearGradient>
+            <linearGradient id="water" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#EA580C"/>
+              <stop offset="100%" stop-color="#F97316"/>
+            </linearGradient>
+            <radialGradient id="pulse" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#EA580C" stop-opacity="0.8"/>
+              <stop offset="100%" stop-color="#EA580C" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+          <!-- Grid background handled by CSS ::before -->
+
+          <!-- Main pipe -->
+          <rect x="20" y="180" width="360" height="40" rx="6" fill="url(#pipe)" stroke="#475569" stroke-width="1"/>
+          <rect x="20" y="186" width="360" height="28" rx="3" fill="#0F172A"/>
+
+          <!-- Branch tee -->
+          <rect x="180" y="100" width="40" height="80" rx="6" fill="url(#pipe)" stroke="#475569" stroke-width="1"/>
+          <rect x="186" y="106" width="28" height="74" rx="3" fill="#0F172A"/>
+
+          <!-- Flanges -->
+          <circle cx="60" cy="200" r="22" fill="#1E293B" stroke="#64748B" stroke-width="1"/>
+          <circle cx="60" cy="200" r="14" fill="#0F172A"/>
+          <circle cx="60" cy="200" r="3" fill="#94A3B8"/>
+          <circle cx="200" cy="80" r="14" fill="#1E293B" stroke="#64748B" stroke-width="1"/>
+          <circle cx="200" cy="80" r="9" fill="#0F172A"/>
+          <circle cx="340" cy="200" r="22" fill="#1E293B" stroke="#64748B" stroke-width="1"/>
+          <circle cx="340" cy="200" r="14" fill="#0F172A"/>
+          <circle cx="340" cy="200" r="3" fill="#94A3B8"/>
+
+          <!-- Flowing water — orange particles along main pipe -->
+          <g>
+            <circle r="3" fill="#EA580C">
+              <animate attributeName="cx" values="30;380" dur="2.4s" repeatCount="indefinite"/>
+              <animate attributeName="cy" values="200;200" dur="2.4s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="2.4s" repeatCount="indefinite"/>
+            </circle>
+            <circle r="3" fill="#F97316">
+              <animate attributeName="cx" values="30;380" dur="2.4s" begin="-0.6s" repeatCount="indefinite"/>
+              <animate attributeName="cy" values="196;196" dur="2.4s" begin="-0.6s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="2.4s" begin="-0.6s" repeatCount="indefinite"/>
+            </circle>
+            <circle r="3" fill="#EA580C">
+              <animate attributeName="cx" values="30;380" dur="2.4s" begin="-1.2s" repeatCount="indefinite"/>
+              <animate attributeName="cy" values="204;204" dur="2.4s" begin="-1.2s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="2.4s" begin="-1.2s" repeatCount="indefinite"/>
+            </circle>
+            <circle r="2" fill="#F97316">
+              <animate attributeName="cx" values="30;380" dur="2.4s" begin="-1.8s" repeatCount="indefinite"/>
+              <animate attributeName="cy" values="200;200" dur="2.4s" begin="-1.8s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0;0.8;0.8;0" keyTimes="0;0.1;0.9;1" dur="2.4s" begin="-1.8s" repeatCount="indefinite"/>
+            </circle>
+          </g>
+
+          <!-- Branch flow upward -->
+          <g>
+            <circle r="2.5" fill="#EA580C">
+              <animate attributeName="cy" values="200;80" dur="1.8s" repeatCount="indefinite"/>
+              <animate attributeName="cx" values="200;200" dur="1.8s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="1.8s" repeatCount="indefinite"/>
+            </circle>
+            <circle r="2.5" fill="#F97316">
+              <animate attributeName="cy" values="200;80" dur="1.8s" begin="-0.9s" repeatCount="indefinite"/>
+              <animate attributeName="cx" values="200;200" dur="1.8s" begin="-0.9s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="1.8s" begin="-0.9s" repeatCount="indefinite"/>
+            </circle>
+          </g>
+
+          <!-- Pressure pulse at junction -->
+          <circle cx="200" cy="200" r="30" fill="url(#pulse)" opacity="0.5">
+            <animate attributeName="r" values="20;60;20" dur="3s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" values="0.7;0;0.7" dur="3s" repeatCount="indefinite"/>
+          </circle>
+
+          <!-- Labels -->
+          <text x="60" y="245" fill="#94A3B8" font-family="JetBrains Mono" font-size="9" text-anchor="middle">INTAKE</text>
+          <text x="340" y="245" fill="#94A3B8" font-family="JetBrains Mono" font-size="9" text-anchor="middle">OUTLET</text>
+          <text x="200" y="65" fill="#94A3B8" font-family="JetBrains Mono" font-size="9" text-anchor="middle">SENSOR</text>
+
+          <!-- Velocity vectors at outlet -->
+          <g stroke="#EA580C" stroke-width="1" fill="none">
+            <line x1="345" y1="195" x2="365" y2="195"/>
+            <polygon points="365,192 365,198 372,195" fill="#EA580C" stroke="none"/>
+            <line x1="345" y1="200" x2="370" y2="200"/>
+            <polygon points="370,197 370,203 377,200" fill="#EA580C" stroke="none"/>
+            <line x1="345" y1="205" x2="365" y2="205"/>
+            <polygon points="365,202 365,208 372,205" fill="#EA580C" stroke="none"/>
+          </g>
+        </svg>
+        <div class="flow-readout">
+          <div class="row"><span>Q (volumestrøm)</span><span class="v">2.40 m³/h</span></div>
+          <div class="row"><span>v (hastighed)</span><span class="v">1.62 m/s</span></div>
+          <div class="row"><span>ΔP (trykfald)</span><span class="v">0.42 bar</span></div>
+          <div class="row"><span>Re (Reynolds)</span><span class="v">142,800</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CAPABILITIES
+     ============================================================ -->
+<section class="capabilities" id="ydelser">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="label">// Ydelser</span>
+      <h2>Seks specialer. Ét ingeniørprincip.</h2>
+      <p>Hver ydelse leveres med samme tilgang: mål først, modellér, byg bagefter. Vi gætter ikke på tryktab — vi regner.</p>
+    </div>
+    <div class="cap-grid">
+      <div class="cap reveal">
+        <div class="cap-num">// 01</div>
+        <div class="cap-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M3 12h6l3-9 3 18 3-9h3"/>
+          </svg>
+        </div>
+        <h3>Hydraulisk projektering</h3>
+        <p>Dimensionering af rør, pumper og ventiler baseret på Darcy-Weisbach og lokale tryktab. Vi modellerer dit system i fuld skala inden montage.</p>
+        <div class="tags"><span class="tag">CFD</span><span class="tag">Darcy-Weisbach</span><span class="tag">Reynolds</span></div>
+      </div>
+      <div class="cap reveal reveal-d1">
+        <div class="cap-num">// 02</div>
+        <div class="cap-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <rect x="3" y="9" width="18" height="6" rx="1"/>
+            <path d="M12 3v6M12 15v6M3 12h18"/>
+          </svg>
+        </div>
+        <h3>VVS-entreprise</h3>
+        <p>Komplet udførelse af varme-, vand- og sanitetsinstallationer — fra projektering over koordinering med bygherre til aflevering og dokumentation.</p>
+        <div class="tags"><span class="tag">DS 439</span><span class="tag">DS/EN 806</span><span class="tag">AB18</span></div>
+      </div>
+      <div class="cap reveal reveal-d2">
+        <div class="cap-num">// 03</div>
+        <div class="cap-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <circle cx="12" cy="12" r="9"/>
+            <path d="M12 7v5l3 2"/>
+          </svg>
+        </div>
+        <h3>Trykprøvning & idriftsættelse</h3>
+        <p>Trykprøvning af rørsystemer op til PN40, inkl. protokol, attest og myndighedsgodkendelse. Vi idriftsætter og tuner indtil specifikationerne holder.</p>
+        <div class="tags"><span class="tag">PN16-PN40</span><span class="tag">NACE</span><span class="tag">ATEX</span></div>
+      </div>
+      <div class="cap reveal">
+        <div class="cap-num">// 04</div>
+        <div class="cap-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M3 17l4-4 4 4 4-8 4 4 2-2"/>
+            <circle cx="7" cy="13" r="1" fill="currentColor"/>
+            <circle cx="11" cy="17" r="1" fill="currentColor"/>
+            <circle cx="15" cy="9" r="1" fill="currentColor"/>
+            <circle cx="19" cy="13" r="1" fill="currentColor"/>
+          </svg>
+        </div>
+        <h3>Strømningsanalyse & optimering</h3>
+        <p>Eksisterende anlæg med høje energiregninger? Vi måler, simulerer og optimerer. Typisk 18-32% pumpeenergibesparelse på 6-12 måneder.</p>
+        <div class="tags"><span class="tag">Pitot-rør</span><span class="tag">Ultralyds</span><span class="tag">ISO 5167</span></div>
+      </div>
+      <div class="cap reveal reveal-d1">
+        <div class="cap-num">// 05</div>
+        <div class="cap-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+            <circle cx="12" cy="12" r="3"/>
+          </svg>
+        </div>
+        <h3>Energioptimering</h3>
+        <p>Fjernvarme, procesvarme og varmegenvinding. Vi kortlægger dit forbrug, foreslår tiltag og beregner tilbagebetalingstid før vi går i gang.</p>
+        <div class="tags"><span class="tag">DS 469</span><span class="tag">ESCO</span><span class="tag">ROI</span></div>
+      </div>
+      <div class="cap reveal reveal-d2">
+        <div class="cap-num">// 06</div>
+        <div class="cap-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M12 2L4 6v6c0 5 3.5 9 8 10 4.5-1 8-5 8-10V6l-8-4z"/>
+            <path d="M9 12l2 2 4-4"/>
+          </svg>
+        </div>
+        <h3>Renrum & procesteknik</h3>
+        <p>Installation i GMP-klassificerede miljøer. Vi leverer sanitære rørsystemer, damp- og rentvandsanlæg til pharma- og fødevareindustri.</p>
+        <div class="tags"><span class="tag">GMP</span><span class="tag">FDA</span><span class="tag">EHEDG</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     METHOD
+     ============================================================ -->
+<section class="method" id="metode">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="label">// Metode</span>
+      <h2>Fem faser. Ingen overraskelser.</h2>
+      <p>Vores tilgang er dokumenteret, sporbar og bygget til at modstå tilsyn, myndigheder og bygherrens egne revisorer.</p>
+    </div>
+    <div class="method-steps">
+      <div class="method-step reveal">
+        <div class="n">// FASE 01</div>
+        <h4>Audit & opmåling</h4>
+        <p>Vi starter altid på stedet. Flowmåling, trykmåling, termografi, fotodokumentation. Du får en rapport der viser udgangspunktet i tal.</p>
+        <div class="spec">LEVERANCE: AUDIT-RAPPORT<br>VARIGHED: 3-7 DAGE<br>DATA: 50-200 MÅLEPUNKTER</div>
+      </div>
+      <div class="method-step reveal reveal-d1">
+        <div class="n">// FASE 02</div>
+        <h4>Model & beregning</h4>
+        <p>Vi modellerer dit system i Autodesk Revit + OpenFOAM/CFD. Du ser tryktab, hastighedsprofiler og turbulens før der mures en flange op.</p>
+        <div class="spec">LEVERANCE: CFD-RAPPORT + BIM-MODEL<br>VARIGHED: 2-4 UGER<br>SOFTWARE: REVIT · OPENFOAM</div>
+      </div>
+      <div class="method-step reveal reveal-d2">
+        <div class="n">// FASE 03</div>
+        <h4>Projektering & indkøb</h4>
+        <p>Myndighedsgodkendelser, udbudsmateriale, komponentlister. Vi koordinerer med rådgivende ingeniør og sikrer sporbarhed på hvert komponent.</p>
+        <div class="spec">LEVERANCE: PROJEKT + UDVALG<br>VARIGHED: 3-6 UGER<br>STANDARDER: DS/EN 13480 · DS/EN 13445</div>
+      </div>
+      <div class="method-step reveal reveal-d3">
+        <div class="n">// FASE 04</div>
+        <h4>Udførelse & aflevering</h4>
+        <p>Vi møder selv på pladsen. Svejsning, montering, trykprøvning, idriftsættelse, as-built dokumentation. Aflevering med komplet dokumentationspakke.</p>
+        <div class="spec">LEVERANCE: AFLEVERINGSPROTOKOL<br>VARIGHED: 4-16 UGER<br>GARANTI: 24 MDR. PÅ UDFØRELSE</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CASE
+     ============================================================ -->
+<section class="case" id="cases">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="label">// Casestudie</span>
+      <h2>Fjernvarme Hovedstaden — trykfald halveret på 11 uger</h2>
+      <p>En hovedstadsforbindelse med 18% trykfald over distributionsnettet. Vi kortlagde, modellerede og ombyggede. Resultatet taler for sig selv.</p>
+    </div>
+    <div class="case-card reveal">
+      <div class="case-text">
+        <div class="meta">// PROJEKT #HV-2024-187 · HOVEDSTADEN</div>
+        <h3>DN300 distributionsledning — Avedøre → Brøndby</h3>
+        <p>Eksisterende twin-rør system med 18% trykfald over 2.4 km. Fjernvarmeselskabet oplevede klager fra slutkunder og stigende returtemperaturer. Vi blev hyret ind til at finde årsagen og løse den — uden at lukke forsyningen.</p>
+        <p>Vores CFD-analyse viste tre snævre pasninger i et gammelt 1987-ledningsnet der skabte lokaliserede tryktab på op til 4× det forventede. Vi designede erstatningssektioner i DN300 PEX med præfabrikerede böjninger og idriftsatte i 11 uger.</p>
+        <div class="case-tags">
+          <span class="tag">DN300</span>
+          <span class="tag">PN16</span>
+          <span class="tag">CFD</span>
+          <span class="tag">PEX</span>
+          <span class="tag">DS/EN 15698</span>
+        </div>
+      </div>
+      <div class="case-metrics">
+        <div class="case-metric">
+          <div class="k">-49<u>%</u></div>
+          <div class="l">Trykfald</div>
+        </div>
+        <div class="case-metric">
+          <div class="k">+340<u>kWh/d</u></div>
+          <div class="l">Energibesparelse</div>
+        </div>
+        <div class="case-metric">
+          <div class="k">11<u>uger</u></div>
+          <div class="l">Projekttid</div>
+        </div>
+        <div class="case-metric">
+          <div class="k">2.4<u>år</u></div>
+          <div class="l">Tilbagebetaling</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CALCULATOR — interactive
+     ============================================================ -->
+<section class="calc" id="vaerktoj">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="label">// Værktøj</span>
+      <h2>Flow-modellereren — interaktiv demo</h2>
+      <p>Et forsimplet eksempel på den beregningskerne vi bruger i projekteringen. Justér diameter, flow og længde — se hvad der sker med trykfald og pumpeenergi.</p>
+    </div>
+    <div class="calc-stage reveal">
+      <div class="calc-controls">
+        <h3>Parametre</h3>
+        <p>Beregnet med Darcy-Weisbach for vand ved 20°C. Antager glat stålrør.</p>
+        <div class="calc-field">
+          <label>Indvendig diameter <span class="v" id="dLabel">DN100 · 107.1 mm</span></label>
+          <input type="range" id="diameter" min="40" max="250" step="10" value="100">
+        </div>
+        <div class="calc-field">
+          <label>Volumestrøm <span class="v" id="qLabel">25.0 m³/h</span></label>
+          <input type="range" id="flow" min="1" max="200" step="1" value="25">
+        </div>
+        <div class="calc-field">
+          <label>Rørlængde <span class="v" id="lLabel">100 m</span></label>
+          <input type="range" id="length" min="10" max="2000" step="10" value="100">
+        </div>
+        <div class="calc-readout">
+          <div class="title">// BEREGNET RESULTAT</div>
+          <div class="big" id="dpVal">0.84<span class="u">bar</span></div>
+          <div class="sub">Samlet trykfald over rørstrækningen</div>
+          <div class="grid">
+            <div class="cell">
+              <div class="k" id="vVal">0.77<span class="u">m/s</span></div>
+              <div class="l">Hastighed</div>
+            </div>
+            <div class="cell">
+              <div class="k" id="reVal">82,400</div>
+              <div class="l">Reynolds</div>
+            </div>
+            <div class="cell">
+              <div class="k" id="regimeVal">Turbulent</div>
+              <div class="l">Strømning</div>
+            </div>
+            <div class="cell">
+              <div class="k" id="pumpVal">0.58<span class="u">kW</span></div>
+              <div class="l">Pumpeeffekt</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="calc-pipe">
+        <svg viewBox="0 0 500 340" width="100%" height="100%" preserveAspectRatio="xMidYMid meet">
+          <defs>
+            <linearGradient id="cpipe" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#1E293B"/>
+              <stop offset="100%" stop-color="#334155"/>
+            </linearGradient>
+            <radialGradient id="cpulse" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#EA580C" stop-opacity="0.6"/>
+              <stop offset="100%" stop-color="#EA580C" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+          <!-- Pipe body -->
+          <rect x="40" y="150" width="420" height="50" rx="6" fill="url(#cpipe)" stroke="#475569" stroke-width="1"/>
+          <rect x="46" y="156" width="408" height="38" rx="3" fill="#0F172A" id="cInnerPipe"/>
+
+          <!-- Flanges left/right -->
+          <circle cx="80" cy="175" r="32" fill="#1E293B" stroke="#64748B" stroke-width="1.5"/>
+          <circle cx="80" cy="175" r="22" fill="#0F172A"/>
+          <g stroke="#64748B" stroke-width="1">
+            <line x1="80" y1="143" x2="80" y2="149"/>
+            <line x1="80" y1="201" x2="80" y2="207"/>
+            <line x1="56" y1="155" x2="62" y2="158"/>
+            <line x1="56" y1="195" x2="62" y2="192"/>
+            <line x1="104" y1="155" x2="98" y2="158"/>
+            <line x1="104" y1="195" x2="98" y2="192"/>
+          </g>
+          <circle cx="80" cy="175" r="4" fill="#94A3B8"/>
+
+          <circle cx="420" cy="175" r="32" fill="#1E293B" stroke="#64748B" stroke-width="1.5"/>
+          <circle cx="420" cy="175" r="22" fill="#0F172A"/>
+          <g stroke="#64748B" stroke-width="1">
+            <line x1="420" y1="143" x2="420" y2="149"/>
+            <line x1="420" y1="201" x2="420" y2="207"/>
+            <line x1="396" y1="155" x2="402" y2="158"/>
+            <line x1="396" y1="195" x2="402" y2="192"/>
+            <line x1="444" y1="155" x2="438" y2="158"/>
+            <line x1="444" y1="195" x2="438" y2="192"/>
+          </g>
+          <circle cx="420" cy="175" r="4" fill="#94A3B8"/>
+
+          <!-- Labels -->
+          <text x="80" y="220" fill="#94A3B8" font-family="JetBrains Mono" font-size="9" text-anchor="middle">P1</text>
+          <text x="420" y="220" fill="#94A3B8" font-family="JetBrains Mono" font-size="9" text-anchor="middle">P2</text>
+          <text x="250" y="135" fill="#EA580C" font-family="JetBrains Mono" font-size="11" text-anchor="middle" font-weight="600" id="lengthLabel">100 m</text>
+
+          <!-- Animated particles (will be styled by JS) -->
+          <g id="particles"></g>
+
+          <!-- Pressure gauge left -->
+          <g transform="translate(80, 60)">
+            <circle r="22" fill="#0F172A" stroke="#EA580C" stroke-width="1.5"/>
+            <line x1="0" y1="0" x2="0" y2="-15" stroke="#EA580C" stroke-width="2" stroke-linecap="round">
+              <animateTransform attributeName="transform" type="rotate" values="-120;-120" dur="1s"/>
+            </line>
+            <circle r="2" fill="#EA580C"/>
+            <text y="36" fill="#94A3B8" font-family="JetBrains Mono" font-size="8" text-anchor="middle">P1</text>
+          </g>
+          <!-- Pressure gauge right -->
+          <g transform="translate(420, 60)">
+            <circle r="22" fill="#0F172A" stroke="#EA580C" stroke-width="1.5"/>
+            <line x1="0" y1="0" x2="0" y2="-15" stroke="#EA580C" stroke-width="2" stroke-linecap="round">
+              <animateTransform attributeName="transform" type="rotate" values="-128;-128" dur="1s"/>
+            </line>
+            <circle r="2" fill="#EA580C"/>
+            <text y="36" fill="#94A3B8" font-family="JetBrains Mono" font-size="8" text-anchor="middle">P2</text>
+          </g>
+
+          <!-- Annotations -->
+          <text x="40" y="290" fill="#64748B" font-family="JetBrains Mono" font-size="9">← INDLØB · Q</text>
+          <text x="460" y="290" fill="#64748B" font-family="JetBrains Mono" font-size="9" text-anchor="end">UDLØB →</text>
+          <text x="250" y="290" fill="#94A3B8" font-family="JetBrains Mono" font-size="9" text-anchor="middle" id="dLabelPipe">DN100</text>
+
+          <!-- Reynolds annotation -->
+          <text x="250" y="320" fill="#64748B" font-family="JetBrains Mono" font-size="9" text-anchor="middle" id="reLabelPipe">Re = 82,400 · turbulent</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     INDUSTRIES
+     ============================================================ -->
+<section class="industries" id="industri">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="label">// Brancher</span>
+      <h2>Vi arbejder for dem, der har rør der ikke må svigte.</h2>
+      <p>Industri, byggeri, energi og pharma — forskellige krav, samme ingeniørprincipper.</p>
+    </div>
+    <div class="ind-grid">
+      <div class="ind reveal">
+        <div class="ind-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-4"/>
+          </svg>
+        </div>
+        <div class="ind-name">Fjernvarme</div>
+        <div class="ind-desc">DN50-DN600</div>
+      </div>
+      <div class="ind reveal reveal-d1">
+        <div class="ind-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <rect x="3" y="9" width="18" height="11" rx="1"/>
+            <path d="M7 9V6a5 5 0 0110 0v3"/>
+          </svg>
+        </div>
+        <div class="ind-name">Fødevare</div>
+        <div class="ind-desc">CIP · EHEDG</div>
+      </div>
+      <div class="ind reveal reveal-d2">
+        <div class="ind-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <rect x="4" y="4" width="16" height="16" rx="1"/>
+            <path d="M9 9h6v6H9z"/>
+          </svg>
+        </div>
+        <div class="ind-name">Pharma</div>
+        <div class="ind-desc">GMP · FDA</div>
+      </div>
+      <div class="ind reveal reveal-d3">
+        <div class="ind-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <circle cx="12" cy="12" r="9"/>
+            <path d="M12 3v18M3 12h18"/>
+          </svg>
+        </div>
+        <div class="ind-name">Procesindustri</div>
+        <div class="ind-desc">ATEX · NACE</div>
+      </div>
+      <div class="ind reveal">
+        <div class="ind-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
+          </svg>
+        </div>
+        <div class="ind-name">Bygherrer</div>
+        <div class="ind-desc">DS 439</div>
+      </div>
+      <div class="ind reveal reveal-d1">
+        <div class="ind-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M2 12h6l3-9 3 18 3-9h5"/>
+          </svg>
+        </div>
+        <div class="ind-name">Hospitaler</div>
+        <div class="ind-desc">HTM · renrum</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CREDENTIALS
+     ============================================================ -->
+<section class="cred" id="standarder">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="label">// Standarder & værktøjer</span>
+      <h2>Vi arbejder efter standarder. Vi dokumenterer i standarder.</h2>
+      <p>Alle projekter leveres med komplet dokumentation, kvalitetsplan og sporbarhed ned til det enkelte svejsepunkt.</p>
+    </div>
+    <div class="cred-grid">
+      <div class="cred-list reveal">
+        <div class="cred-item">
+          <div class="code">DS 439</div>
+          <div>
+            <div class="name">VVS-installationer — vand- og afløbsanlæg</div>
+            <div class="desc">Dansk standard for vandinstallationer i bygninger</div>
+          </div>
+          <div class="check">✓</div>
+        </div>
+        <div class="cred-item">
+          <div class="code">DS 469</div>
+          <div>
+            <div class="name">Varme- og køleanlæg i bygninger</div>
+            <div class="desc">Dimensionering og projektering</div>
+          </div>
+          <div class="check">✓</div>
+        </div>
+        <div class="cred-item">
+          <div class="code">EN 13480</div>
+          <div>
+            <div class="name">Metalliske rørledninger — industriel proces</div>
+            <div class="desc">Design, fabrikation og inspektion</div>
+          </div>
+          <div class="check">✓</div>
+        </div>
+        <div class="cred-item">
+          <div class="code">EN 13445</div>
+          <div>
+            <div class="name">Ubrændte trykbeholdere</div>
+            <div class="desc">Design og fremstilling</div>
+          </div>
+          <div class="check">✓</div>
+        </div>
+        <div class="cred-item">
+          <div class="code">ISO 5167</div>
+          <div>
+            <div class="name">Flowmåling med blænder og dyser</div>
+            <div class="desc">Kalibrering og beregning</div>
+          </div>
+          <div class="check">✓</div>
+        </div>
+        <div class="cred-item">
+          <div class="code">EHEDG</div>
+          <div>
+            <div class="name">European Hygienic Engineering Design Group</div>
+            <div class="desc">Sanitære designprincipper for fødevareudstyr</div>
+          </div>
+          <div class="check">✓</div>
+        </div>
+      </div>
+      <div class="stack-card reveal reveal-d1">
+        <h3>// Software stack</h3>
+        <p style="font-size:0.85rem;color:var(--slate-400);margin-bottom:1.2rem">Vi modellerer, beregner og dokumenterer i de værktøjer som bygherren specificerer — eller anbefaler selv.</p>
+        <div class="stack-list">
+          <div class="stack-item"><div class="nm">Autodesk Revit</div><div class="rs">BIM · 3D-projektering</div></div>
+          <div class="stack-item"><div class="nm">OpenFOAM</div><div class="rs">CFD · open-source</div></div>
+          <div class="stack-item"><div class="nm">ANSYS Fluent</div><div class="rs">CFD · kommerciel</div></div>
+          <div class="stack-item"><div class="nm">AutoCAD Plant 3D</div><div class="rs">P&amp;ID · proces</div></div>
+          <div class="stack-item"><div class="nm">PipeFlow Expert</div><div class="rs">Netværksberegning</div></div>
+          <div class="stack-item"><div class="nm">SolidWorks</div><div class="rs">3D-komponenter</div></div>
+          <div class="stack-item"><div class="nm">MagICAD</div><div class="rs">VVS i Revit</div></div>
+          <div class="stack-item"><div class="nm">Trimble Nova</div><div class="rs">Opmåling · laserscanning</div></div>
+        </div>
+        <div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,0.08);font-family:var(--font-mono);font-size:0.7rem;color:var(--slate-500);letter-spacing:0.04em">
+          CERTIFICERINGER · IWS · IWT · NDT-LEVEL 2 · DS/EN 1090-2 EXC3
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CONTACT
+     ============================================================ -->
+<section class="contact" id="kontakt">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="reveal">
+        <span class="label">// Kontakt</span>
+        <h2>Lad os tale om dit næste projekt.</h2>
+        <p class="lede">Send os en kort beskrivelse af din opgave — vi vender tilbage indenfor 24 timer med et teknisk bud på løsningen. Akutte sager besvares døgnet rundt.</p>
+
+        <div class="contact-info">
+          <div class="contact-row">
+            <div class="ic">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+            </div>
+            <div>
+              <div class="lbl">Adresse</div>
+              <div class="val">Havnegade 47, 4. sal<br>1400 København K · Danmark</div>
+            </div>
+          </div>
+          <div class="contact-row">
+            <div class="ic">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+              </svg>
+            </div>
+            <div>
+              <div class="lbl">Hovednummer</div>
+              <div class="val mono">+45 33 14 27 80</div>
+            </div>
+          </div>
+          <div class="contact-row">
+            <div class="ic">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <path d="M22 6l-10 7L2 6"/>
+              </svg>
+            </div>
+            <div>
+              <div class="lbl">E-mail</div>
+              <div class="val mono">projekt@hydroverftet.dk</div>
+            </div>
+          </div>
+          <div class="contact-row">
+            <div class="ic">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 6v6l4 2"/>
+              </svg>
+            </div>
+            <div>
+              <div class="lbl">Åbningstider</div>
+              <div class="val">Man-fre 07:00–17:00 · Akut 24/7/365</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="urgent-banner">
+          <div class="dot"></div>
+          <div>
+            <strong style="color:var(--orange-light)">Akut service · 24/7 hotline</strong><br>
+            <span style="color:var(--slate-400);font-size:0.8rem;font-family:var(--font-mono)">+45 33 14 27 99 · response &lt; 2 timer i hovedstadsområdet</span>
+          </div>
+        </div>
+      </div>
+
+      <form class="form reveal reveal-d1" onsubmit="event.preventDefault();alert('Tak — vi vender tilbage indenfor 24 timer. (Demo)');">
+        <div class="form-row">
+          <div class="form-field">
+            <label>Navn</label>
+            <input type="text" placeholder="Dit fulde navn" required>
+          </div>
+          <div class="form-field">
+            <label>Virksomhed</label>
+            <input type="text" placeholder="Firmanavn">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-field">
+            <label>Telefon</label>
+            <input type="tel" placeholder="+45 ...">
+          </div>
+          <div class="form-field">
+            <label>E-mail</label>
+            <input type="email" placeholder="navn@firma.dk" required>
+          </div>
+        </div>
+        <div class="form-field">
+          <label>Projekttype</label>
+          <select>
+            <option>Vælg type...</option>
+            <option>Hydraulisk projektering</option>
+            <option>VVS-entreprise</option>
+            <option>Trykprøvning & idriftsættelse</option>
+            <option>Strømningsanalyse</option>
+            <option>Energioptimering</option>
+            <option>Renrum & procesteknik</option>
+            <option>Akut service / reparation</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label>Beskrivelse af opgaven</label>
+          <textarea placeholder="Rørstørrelse, medium, trykklasse, tidsfrist, adresse..."></textarea>
+        </div>
+        <button type="submit" class="form-submit">Send forespørgsel →</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="brand" style="margin-bottom:0.5rem">
+          <div class="brand-mark"></div>
+          <div class="brand-name"><strong style="color:#fff">Hydroverftet</strong><span style="color:var(--slate-500)">ApS</span></div>
+        </div>
+        <p>Dansk VVS- og strømningsteknik-virksomhed etableret 1998. CVR 39847201. Autoriseret VVS-installatør.</p>
+      </div>
+      <div class="foot-col">
+        <h5>// Ydelser</h5>
+        <a href="#">Hydraulisk projektering</a>
+        <a href="#">VVS-entreprise</a>
+        <a href="#">Strømningsanalyse</a>
+        <a href="#">Energioptimering</a>
+      </div>
+      <div class="foot-col">
+        <h5>// Virksomhed</h5>
+        <a href="#">Om os</a>
+        <a href="#">Cases</a>
+        <a href="#">Karriere</a>
+        <a href="#">Certifikater</a>
+      </div>
+      <div class="foot-col">
+        <h5>// Kontakt</h5>
+        <a href="#">Havnegade 47, Kbh K</a>
+        <a href="#">+45 33 14 27 80</a>
+        <a href="#">projekt@hydroverftet.dk</a>
+        <a href="#">Akut: 33 14 27 99</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 HYDROVERFTET APS · ALLE RETTIGHEDER FORBEHOLDES</span>
+      <span>v1.0 · BYGGET AF HYDROVERFTET ENGINEERING</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ============================================================
+// SCROLL REVEAL
+// ============================================================
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+// ============================================================
+// PIPE FLOW CALCULATOR
+// Darcy-Weisbach: Δp = f · (L/D) · (ρ·v²)/2
+// f via Swamee-Jain from Re
+// ============================================================
+const $ = id => document.getElementById(id);
+const dia = $('diameter'), flw = $('flow'), len = $('length');
+const partG = $('particles');
+
+function setText(el, txt){ el.textContent = txt; }
+
+function standardDN(d){
+  // Map inner diameter to nearest DN standard
+  if (d <= 54) return 'DN50';
+  if (d <= 82) return 'DN80';
+  if (d <= 107) return 'DN100';
+  if (d <= 160) return 'DN150';
+  if (d <= 207) return 'DN200';
+  return 'DN250';
+}
+
+function recalc(){
+  const d_mm = parseFloat(dia.value);
+  const q_m3h = parseFloat(flw.value);
+  const L_m = parseFloat(len.value);
+  const d = d_mm / 1000;
+  const A = Math.PI * (d/2)**2;
+  const q = q_m3h / 3600;
+  const v = q / A;
+  const nu = 1.004e-6;          // kinematic viscosity of water @ 20°C
+  const Re = v * d / nu;
+  const ks = 0.045e-3;          // roughness, commercial steel
+  // Swamee-Jain
+  const f = Re > 0 ? 0.25 / Math.pow(Math.log10(ks/(3.7*d) + 5.74/Math.pow(Re,0.9)), 2) : 0;
+  const rho = 998;
+  const dP_pa = f * (L_m/d) * (rho * v * v / 2);
+  const dP_bar = dP_pa / 1e5;
+  const P_kW = q * dP_pa / 1000;
+  const regime = Re < 2300 ? 'Laminar' : Re < 4000 ? 'Overgang' : 'Turbulent';
+
+  // Labels
+  setText($('dLabel'), `${standardDN(d_mm)} · ${d_mm.toFixed(1)} mm`);
+  setText($('qLabel'), `${q_m3h.toFixed(1)} m³/h`);
+  setText($('lLabel'), `${L_m} m`);
+  setText($('dpVal'), `${dP_bar.toFixed(2)}<span class="u">bar</span>`);
+  setText($('vVal'), `${v.toFixed(2)}<span class="u">m/s</span>`);
+  setText($('reVal'), Math.round(Re).toLocaleString('da-DK'));
+  setText($('regimeVal'), regime);
+  setText($('pumpVal'), `${P_kW.toFixed(2)}<span class="u">kW</span>`);
+  setText($('lengthLabel'), `${L_m} m`);
+  setText($('dLabelPipe'), `${standardDN(d_mm)} · Ø${d_mm} mm`);
+  setText($('reLabelPipe'), `Re = ${Math.round(Re).toLocaleString('da-DK')} · ${regime.toLowerCase()}`);
+
+  // Inner pipe height scales with diameter visually
+  const innerH = Math.max(8, Math.min(38, 38 * (d_mm / 250)));
+  const innerY = 175 - innerH/2;
+  $('cInnerPipe').setAttribute('y', innerY);
+  $('cInnerPipe').setAttribute('height', innerH);
+
+  // Particles — speed depends on v
+  renderParticles(v);
+}
+
+function renderParticles(v){
+  // Speed inversely related to v (slow in big pipe, fast in small)
+  const speed = Math.max(0.6, 4 - v * 1.4);
+  const count = 14;
+  let html = '';
+  for (let i = 0; i < count; i++){
+    const delay = -(i * (speed / count)).toFixed(2);
+    const yJitter = (Math.random() - 0.5) * 14;
+    const r = Math.random() > 0.7 ? 1.8 : 2.4;
+    const color = i % 2 === 0 ? '#EA580C' : '#F97316';
+    html += `<circle r="${r}" fill="${color}" opacity="0.95">
+      <animate attributeName="cx" values="46;454" dur="${speed}s" begin="${delay}s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="${175 + yJitter};${175 + yJitter}" dur="${speed}s" begin="${delay}s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.08;0.92;1" dur="${speed}s" begin="${delay}s" repeatCount="indefinite"/>
+    </circle>`;
+  }
+  partG.innerHTML = html;
+}
+
+[dia, flw, len].forEach(el => el.addEventListener('input', recalc));
+recalc();
+</script>
+
+</body>
+</html>

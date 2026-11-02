@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Mechanic 07 illustration">
+  <style>
+    .ink { stroke: #211F1B; }
+    .muted { stroke: #6F6A60; }
+    .accent { stroke: #F26B1F; }
+    .thin { stroke-width: 0.75; }
+    .hair { stroke-width: 0.5; }
+    .ink-text { font-family: "Geist Mono", "IBM Plex Mono", monospace; fill: #211F1B; stroke: none; }
+    .muted-text { font-family: "Geist Mono", "IBM Plex Mono", monospace; fill: #6F6A60; stroke: none; }
+    .accent-text { font-family: "Geist Mono", "IBM Plex Mono", monospace; fill: #F26B1F; stroke: none; font-weight: 600; }
+  </style>
+
+    <rect class="ink thin" x="2" y="2" width="316" height="196" />
+    <text class="muted-text" x="10" y="18" font-size="8">FIG. 07 · PUNCHOUT</text>
+    <text class="muted-text" x="306" y="18" font-size="8" text-anchor="end">9 platforms</text>
+    <!-- Two boxes connected by arrows -->
+    <rect class="ink" x="30" y="60" width="100" height="80" />
+    <text class="ink-text" x="80" y="100" font-size="10" text-anchor="middle">Ariba</text>
+    <text class="muted-text" x="80" y="114" font-size="7" text-anchor="middle">cXML</text>
+    <rect class="ink" x="190" y="60" width="100" height="80" />
+    <text class="ink-text" x="240" y="100" font-size="10" text-anchor="middle">Officraft</text>
+    <text class="muted-text" x="240" y="114" font-size="7" text-anchor="middle">Punchout</text>
+    <!-- Bidirectional arrow -->
+    <line class="ink" x1="135" y1="90" x2="180" y2="90" />
+    <polygon points="138,87 138,93 132,90" fill="#211F1B" />
+    <line class="ink" x1="180" y1="106" x2="135" y2="106" />
+    <polygon points="177,103 177,109 183,106" fill="#211F1B" />
+    <text class="muted-text" x="158" y="86" font-size="7" text-anchor="middle">PO</text>
+    <text class="muted-text" x="158" y="118" font-size="7" text-anchor="middle">cart</text>
+    <text class="ink-text" x="10" y="178" font-size="9">SAP · Coupa · Oracle · Jaggaer</text>
+    <text class="muted-text" x="10" y="190" font-size="7">D365 · Sage · Workday · Odoo</text>
+  
+</svg>

@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0E1116" />
+  <title>About — Officraft</title>
+  <meta name="description" content="Officraft was started by people who spent ten years buying office equipment for engineering companies. We sell the full office from one cart, with per-product CO2e on every page." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@200;300;400;500;600;700&family=Geist+Mono:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23211F1B'/%3E%3Cpolygon points='8,8 24,8 16,24' fill='%23F8F6F2'/%3E%3C/svg%3E" />
+</head>
+<body>
+  <a class="skip-to-content" href="#main">Skip to content</a>
+
+  <header class="topnav">
+      <div class="container topnav__inner">
+        <a href="index.html" class="topnav__logo" aria-label="Officraft home">
+          <span class="topnav__logo-mark" aria-hidden="true"></span>
+          <span>Officraft</span>
+          <span class="topnav__logo-meta">Berlin · Est. 2023</span>
+        </a>
+        <nav aria-label="Primary">
+          <ul class="topnav__links">
+            <li><a href="catalog.html">Catalog</a></li>
+            <li><a href="sustainability.html">Sustainability</a></li>
+            <li><a href="enterprise.html">Enterprise</a></li>
+            <li><a href="about.html" aria-current="page">About</a></li>
+          </ul>
+        </nav>
+        <div class="topnav__actions">
+          <a href="catalog.html" class="btn btn--secondary btn--sm topnav__cta">Open catalog</a>
+          <button class="topnav__cart" data-open-cart aria-label="Open quote list (0 items)">
+            <svg width="20" height="20" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M40 72h176l-16 112H56L40 72z"/>
+              <path d="M88 104V72a40 40 0 0 1 80 0v32"/>
+            </svg>
+            <span class="topnav__cart-count" data-cart-count style="display:none">0</span>
+          </button>
+          <button class="topnav__menu-btn" data-menu-btn aria-label="Open menu" aria-expanded="false">
+            <svg width="20" height="20" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="40" y1="64" x2="216" y2="64"/>
+              <line x1="40" y1="128" x2="216" y2="128"/>
+              <line x1="40" y1="192" x2="216" y2="192"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+  <nav class="mobile-menu" data-mobile-menu aria-hidden="true" aria-label="Mobile">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="catalog.html">Catalog</a></li>
+      <li><a href="sustainability.html">Sustainability</a></li>
+      <li><a href="enterprise.html">Enterprise</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+
+  <main id="main">
+
+    <section class="hero">
+      <div class="container">
+        <span class="hero__eyebrow">About Officraft</span>
+        <h1 class="display-1 hero__title" style="max-width: 22ch;">A company that writes things down.</h1>
+        <p class="hero__sub">We started Officraft because we had spent ten years buying office equipment for engineering companies and we were tired of the seam between "office" and "IT." Our first customers were the same people we used to buy for. They've stayed.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <span class="section-head__eyebrow">The founding story</span>
+          <h2 class="h1 section-head__title">Why we built this.</h2>
+        </div>
+        <div style="max-width: 720px;">
+          <p style="font-size: 1.125rem; line-height: 1.7; color: var(--paper); margin-bottom: 24px;">Officraft is a German GmbH founded in 2023 by Lena Voss, Tomás Ribeiro, and a small group of engineers and procurement specialists. We had all, separately, spent the better part of a decade trying to kit out offices for engineering teams — and we had all separately arrived at the same conclusion: the procurement workflow for an office is broken because the catalogs are broken. Office suppliers sell pens and don't sell servers. IT suppliers sell servers and don't sell pens. Nobody sells both.</p>
+
+          <p style="font-size: 1.125rem; line-height: 1.7; color: var(--paper); margin-bottom: 24px;">The closer we looked, the more seams we found. The sustainability data is on a corporate brochure but not on the product page. The procurement integration is "and many more" but not actually SAP Ariba. The account manager has a name on the website but no working phone number. The catalog has a "sustainability" page but no per-SKU CO2e. We built Officraft to remove the seams.</p>
+
+          <p style="font-size: 1.125rem; line-height: 1.7; color: var(--paper); margin-bottom: 24px;">In 2025 we added EU-hosted AI/ML software to the catalog — foundation models, fine-tuning, RAG, document AI, speech, vision, MLOps. The procurement teams we serve are increasingly bundling their AI infrastructure spend with their office infrastructure spend, because both roll up to the same person. So we made them the same cart, with the same account manager, the same net-30 terms, and the same per-SKU CO2e.</p>
+
+          <p style="font-size: 1.0625rem; line-height: 1.7; color: var(--paper-muted);">We are 38 people. We are not for sale. We are ISO 14001 and ISO 9001 certified, ISO 27001 and SOC 2 Type II certified for the software stack, and we publish our supply chain on this page below.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Supply chain -->
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <span class="section-head__eyebrow">Supply chain</span>
+          <h2 class="h1 section-head__title">Named factories, country of origin, certifications. Per category.</h2>
+          <p class="section-head__sub">Not "trusted partners." Actual manufacturers, actual factories, actual certifications. If a fact isn't here, ask us — we'll add it.</p>
+        </div>
+        <div class="supply-list">
+          <div class="supply-row">
+            <div class="supply-row__cat">Writing &amp; Desk Tools</div>
+            <div class="supply-row__detail"><strong>Schneider Schreibgeräte</strong><br/>Metzingen, DE</div>
+            <div class="supply-row__detail"><strong>Recycled stainless steel:</strong><br/>Outokumpu, DE / SE</div>
+            <div class="supply-row__detail">ISO 14001, ISO 9001, Cradle-to-Cradle Bronze (refills)</div>
+          </div>
+          <div class="supply-row">
+            <div class="supply-row__cat">Paper, Filing &amp; Print</div>
+            <div class="supply-row__detail"><strong>Mondi</strong><br/>Frantschach, AT</div>
+            <div class="supply-row__detail"><strong>Remanufactured toner:</strong><br/>Eurotoner, NL</div>
+            <div class="supply-row__detail">FSC Mix, Blue Angel DE-UZ 14a, STMC certified remanufacturing</div>
+          </div>
+          <div class="supply-row">
+            <div class="supply-row__cat">Ergonomic Seating &amp; Desks</div>
+            <div class="supply-row__detail"><strong>Sedus Stoll</strong><br/>Dogern, DE</div>
+            <div class="supply-row__detail"><strong>Steel &amp; aluminum:</strong><br/>Hydro + Norsk Hydro, NO</div>
+            <div class="supply-row__detail">BIFMA X5.1, EN 1335, Greenguard Gold, LWG Gold (leather)</div>
+          </div>
+          <div class="supply-row">
+            <div class="supply-row__cat">Workstation Hardware</div>
+            <div class="supply-row__detail"><strong>Kontron AG</strong><br/>Augsburg, DE</div>
+            <div class="supply-row__detail"><strong>Aluminum chassis:</strong><br/>Hydro CIRCAL 75R, NO</div>
+            <div class="supply-row__detail">EPEAT Gold, TCO Certified, Energy Star 8</div>
+          </div>
+          <div class="supply-row">
+            <div class="supply-row__cat">Meeting &amp; Conference</div>
+            <div class="supply-row__detail"><strong>Arthur Holm</strong><br/>Barcelona, ES</div>
+            <div class="supply-row__detail"><strong>Optics:</strong><br/>Jenoptik, DE</div>
+            <div class="supply-row__detail">Microsoft Teams Rooms certified, Zoom Rooms certified</div>
+          </div>
+          <div class="supply-row">
+            <div class="supply-row__cat">Network &amp; Server</div>
+            <div class="supply-row__detail"><strong>Thomas-Krenn</strong><br/>Freyung, DE</div>
+            <div class="supply-row__detail"><strong>Switching ASICs:</strong><br/>Broadcom Tomahawk, US (designed) / TW (fabricated)</div>
+            <div class="supply-row__detail">80+ Titanium PSUs, ISO 14001 manufacturing</div>
+          </div>
+          <div class="supply-row">
+            <div class="supply-row__cat">AI &amp; ML Software</div>
+            <div class="supply-row__detail"><strong>Compute:</strong><br/>Frankfurt + Stockholm, on contracted 100% renewable PPAs</div>
+            <div class="supply-row__detail"><strong>GPUs:</strong><br/>NVIDIA H100 + L40S, sourced through certified EU distributors</div>
+            <div class="supply-row__detail">SOC 2 Type II, ISO 27001, EU AI Act Article 53, GDPR Art. 28 DPA</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team -->
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <span class="section-head__eyebrow">Team</span>
+          <h2 class="h1 section-head__title">38 people. Berlin HQ. Remote across the EU.</h2>
+          <p class="section-head__sub">A typographic team page, because we don't do stock photography. Names, roles, two-line bios.</p>
+        </div>
+        <div class="team-block">
+          <div class="team-person">
+            <div class="team-person__name">Lena Voss</div>
+            <div class="team-person__role">Co-founder &amp; CEO · Berlin</div>
+            <div class="team-person__bio">Ten years buying office equipment for engineering companies at Volvo, Zalando, and Personio before founding Officraft.</div>
+          </div>
+          <div class="team-person">
+            <div class="team-person__name">Tomás Ribeiro</div>
+            <div class="team-person__role">Co-founder &amp; COO · Lisbon</div>
+            <div class="team-person__bio">Industrial procurement at Siemens, then ops at a Lisbon-based logistics scale-up. Owns supply chain and fulfillment.</div>
+          </div>
+          <div class="team-person">
+            <div class="team-person__name">Dr. Inge Hoffmann</div>
+            <div class="team-person__role">Co-founder &amp; CTO · Berlin</div>
+            <div class="team-person__bio">PhD in distributed systems (TU Berlin). Built the inference stack for a foundation-model lab before Officraft.</div>
+          </div>
+          <div class="team-person">
+            <div class="team-person__name">Astrid Lindqvist</div>
+            <div class="team-person__role">Senior Account Manager · Stockholm</div>
+            <div class="team-person__bio">IT procurement at a Stockholm fintech. Speaks SV / EN.</div>
+          </div>
+          <div class="team-person">
+            <div class="team-person__name">Pieter de Vries</div>
+            <div class="team-person__role">Account Manager · Amsterdam</div>
+            <div class="team-person__bio">Furniture MRO at a Dutch logistics company. Speaks NL / DE / EN.</div>
+          </div>
+          <div class="team-person">
+            <div class="team-person__name">Sara Lindgren</div>
+            <div class="team-person__role">Sustainability Lead · Berlin</div>
+            <div class="team-person__bio">Background in ISO 14064-1 GHG inventories at a Swedish automotive supplier. Manages the Sphera relationship.</div>
+          </div>
+          <div class="team-person">
+            <div class="team-person__name">Ravi Subramanian</div>
+            <div class="team-person__role">Engineering Manager (Software) · Remote</div>
+            <div class="team-person__bio">Built RAG infrastructure at a London legal-tech scale-up. Owns the inference + RAG platform.</div>
+          </div>
+          <div class="team-person">
+            <div class="team-person__name">Klaus Brenner</div>
+            <div class="team-person__role">Head of Logistics · Augsburg</div>
+            <div class="team-person__bio">Twenty years at DHL and Hermes. Owns EU fulfillment and the take-back program.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-head__eyebrow">Contact</span>
+          <h2 class="h1 section-head__title">Reach us.</h2>
+        </div>
+        <div class="grid-3">
+          <div class="card">
+            <h3 class="card__title card__title-lg">Sales</h3>
+            <p class="card__desc">For orders, quotes, custom branding, net-terms activation.</p>
+            <p style="margin-top: 16px;"><a href="mailto:sales@officraft.example" class="mono-data" style="color: var(--paper); border-bottom: 1px dotted var(--ink-line); padding-bottom: 1px;">sales@officraft.example</a><br/><span class="mono-data muted" style="font-size: 0.875rem;">+49 30 1234 5678</span></p>
+          </div>
+          <div class="card">
+            <h3 class="card__title card__title-lg">Support</h3>
+            <p class="card__desc">For order status, warranty claims, take-back scheduling.</p>
+            <p style="margin-top: 16px;"><a href="mailto:support@officraft.example" class="mono-data" style="color: var(--paper); border-bottom: 1px dotted var(--ink-line); padding-bottom: 1px;">support@officraft.example</a><br/><span class="mono-data muted" style="font-size: 0.875rem;">+49 30 1234 5680</span></p>
+          </div>
+          <div class="card">
+            <h3 class="card__title card__title-lg">Press &amp; legal</h3>
+            <p class="card__desc">For press inquiries, partnership proposals, legal correspondence.</p>
+            <p style="margin-top: 16px;"><a href="mailto:press@officraft.example" class="mono-data" style="color: var(--paper); border-bottom: 1px dotted var(--ink-line); padding-bottom: 1px;">press@officraft.example</a></p>
+          </div>
+        </div>
+
+        <div style="margin-top: 48px;">
+          <address class="footer__address" style="font-size: 0.9375rem;">
+            <strong style="color: var(--paper); font-weight: 500; font-style: normal;">Officraft GmbH</strong><br/>
+            Skalitzer Strasse 104<br/>
+            10997 Berlin, Germany<br/>
+            HRB 245681 B · VAT DE 365 412 098
+          </address>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__col">
+          <a href="index.html" class="topnav__logo" style="color: var(--paper)">
+            <span class="topnav__logo-mark" aria-hidden="true"></span>
+            <span>Officraft</span>
+          </a>
+          <p class="muted" style="margin-top: 16px; font-size: 0.9375rem; max-width: 28ch;">Equipment for offices that take themselves seriously.</p>
+          <address class="footer__address">
+            Officraft GmbH<br/>
+            Skalitzer Strasse 104<br/>
+            10997 Berlin, Germany
+          </address>
+        </div>
+        <div class="footer__col">
+          <h4>Catalog</h4>
+          <ul>
+            <li><a href="catalog.html#cat-1">Writing &amp; Desk Tools</a></li>
+            <li><a href="catalog.html#cat-2">Paper, Filing &amp; Print</a></li>
+            <li><a href="catalog.html#cat-3">Ergonomic Seating &amp; Desks</a></li>
+            <li><a href="catalog.html#cat-4">Workstation Hardware</a></li>
+            <li><a href="catalog.html#cat-5">Meeting &amp; Conference</a></li>
+            <li><a href="catalog.html#cat-6">Network &amp; Server</a></li>
+            <li><a href="catalog.html#cat-7">AI &amp; ML Software</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="sustainability.html">Sustainability</a></li>
+            <li><a href="enterprise.html">Enterprise</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="about.html#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Terms of sale</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Imprint</a></li>
+            <li><a href="#">Status</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2026 Officraft GmbH · ISO 14001 + ISO 9001 certified</span>
+        <span class="footer__built">Built in Berlin · Runs on renewable electricity</span>
+      </div>
+    </div>
+  </footer>
+
+  <div data-cart-drawer class="cart-drawer" aria-hidden="true" aria-label="Quote list" role="dialog">
+    <div class="cart-drawer__head">
+      <div class="cart-drawer__title">Quote list</div>
+      <button class="cart-drawer__close" data-close-cart aria-label="Close quote list">
+        <svg width="18" height="18" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="20" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="48" y1="48" x2="208" y2="208"/><line x1="208" y1="48" x2="48" y2="208"/></svg>
+      </button>
+    </div>
+    <div class="cart-drawer__body" data-cart-body></div>
+    <div class="cart-drawer__foot" data-cart-foot>
+      <div style="display: flex; justify-content: space-between; margin-bottom: 16px;">
+        <span class="muted small">Subtotal</span>
+        <span class="mono-data" data-cart-subtotal>0,00 EUR</span>
+      </div>
+      <p class="small muted" style="margin-bottom: 16px;">Freight calculated at checkout. One line item regardless of categories. Net-30 from 5,000 EUR.</p>
+      <a href="enterprise.html#quote" class="btn btn--primary" style="width: 100%; justify-content: center;">Request a quote</a>
+    </div>
+  </div>
+  <div data-cart-backdrop style="display:none; position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 99;" aria-hidden="true"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>

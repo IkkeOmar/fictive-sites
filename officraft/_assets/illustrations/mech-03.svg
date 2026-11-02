@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Mechanic 03 illustration">
+  <style>
+    .ink { stroke: #211F1B; }
+    .muted { stroke: #6F6A60; }
+    .accent { stroke: #F26B1F; }
+    .thin { stroke-width: 0.75; }
+    .hair { stroke-width: 0.5; }
+    .ink-text { font-family: "Geist Mono", "IBM Plex Mono", monospace; fill: #211F1B; stroke: none; }
+    .muted-text { font-family: "Geist Mono", "IBM Plex Mono", monospace; fill: #6F6A60; stroke: none; }
+    .accent-text { font-family: "Geist Mono", "IBM Plex Mono", monospace; fill: #F26B1F; stroke: none; font-weight: 600; }
+  </style>
+
+    <rect class="ink thin" x="2" y="2" width="316" height="196" />
+    <text class="muted-text" x="10" y="18" font-size="8">FIG. 03 · NET TERMS</text>
+    <text class="muted-text" x="306" y="18" font-size="8" text-anchor="end">3 tiers</text>
+    <!-- Timeline axis -->
+    <line class="ink thin" x1="40" y1="100" x2="276" y2="100" />
+    <polygon points="273,97 273,103 280,100" fill="#211F1B" />
+    <!-- Tick marks at 30, 60, 90 -->
+    <line class="ink" x1="100" y1="96" x2="100" y2="104" />
+    <line class="ink" x1="180" y1="96" x2="180" y2="104" />
+    <line class="ink hair" x1="260" y1="96" x2="260" y2="104" />
+    <!-- Tiers -->
+    <rect class="ink hair" x="40"  y="60" width="60" height="20" />
+    <text class="ink-text" x="70" y="74" font-size="9" text-anchor="middle">Net-30</text>
+    <rect class="ink hair" x="120" y="60" width="60" height="20" />
+    <text class="ink-text" x="150" y="74" font-size="9" text-anchor="middle">Net-60</text>
+    <rect class="accent"    x="200" y="60" width="60" height="20" stroke-width="1.5" />
+    <text class="accent-text" x="230" y="74" font-size="9" text-anchor="middle">Net-90</text>
+    <text class="muted-text" x="100" y="118" font-size="7" text-anchor="middle">≥ 5,000 EUR</text>
+    <text class="muted-text" x="180" y="118" font-size="7" text-anchor="middle">≥ 25,000 EUR</text>
+    <text class="muted-text" x="260" y="118" font-size="7" text-anchor="middle">strategic</text>
+    <text class="ink-text" x="10" y="178" font-size="9">from 5,000 EUR</text>
+    <text class="muted-text" x="10" y="190" font-size="7">no setup · standard PO</text>
+  
+</svg>
